@@ -12,10 +12,10 @@
 1. Para cada centro con coordenadas, calcular la distancia en línea recta a la estación de amarre más cercana, a la sede de intercambio más cercana y al **nodo principal** de intercambio del país.
 2. Clasificar por lógica de localización:
    - **conectividad**: a menos de 50 km del nodo principal;
-   - **energética**: a más de 500 km del amarre, y la fuente primaria declara una motivación energética;
+   - **energética**: fuera de ese umbral, y la fuente primaria declara una motivación energética (columna `motivacion_energetica_fuente` del inventario);
    - **mixta**: los demás casos;
    - sin coordenadas: no se clasifica.
-3. Probar la sensibilidad a los umbrales (en `config/pais.yaml`) e informar qué casos cambian.
+3. Probar la sensibilidad al umbral (`localizacion.umbral_nodo_km` en `config/parametros.yaml`) e informar qué casos cambian.
 4. La distancia al amarre se informa como dato del país y no se usa para clasificar: la capacidad de los cables se entrega en puntos de presencia tierra adentro.
 
 ## Procedimiento: uso
@@ -31,4 +31,4 @@
 12 de los 14 centros operativos con coordenadas están a menos de 36 km del nodo principal, y el único amarre del país está a 257 km. Los anuncios con ubicación conocida están a más de 570 km, junto a la generación. En 4 de los 6 centros de interconexión registrados hay nodos de plataformas extranjeras: el parque funciona como puerta de entrada de servicios producidos afuera.
 
 ## En el kit
-`kit/localizacion.py` calcula distancias y clasifica con los umbrales de `config/pais.yaml`. Se corre con `python -m kit.localizacion`.
+`kit/localizacion.py` calcula distancias y clasifica; el nodo principal y los amarres van en `config/pais.yaml` y el umbral, en `config/parametros.yaml`. Se corre con `python -m kit.localizacion`.

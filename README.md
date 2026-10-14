@@ -30,7 +30,7 @@ Ningún módulo inventa un dato: si falta, la celda queda vacía y se informa.
 ## Orden de corrida
 
 ```bash
-cd kit_cirtecal
+cd cirtecal-dc-kit
 python -m pytest -q tests                       # 0. el kit funciona (corre el ejemplo argentino)
 
 python -m kit.inventario                        # 1. valida la planilla (sale con error si hay)
