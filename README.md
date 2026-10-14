@@ -5,7 +5,7 @@ un país y el residuo electrónico que deja. Salió de la investigación argenti
 (oct-2026) y está generalizado para que cualquier equipo del consorcio lo corra con sus
 datos.
 
-**Punto de entrada a los métodos:** [docs/README.md](docs/README.md). Cada método tiene
+**Punto de entrada a los métodos:** [docs/README.md](docs/README.md). La canasta arancelaria, explicada posición por posición: [docs/canasta.md](docs/canasta.md). La clase de método: [clase/](clase/). Cada método tiene
 su ficha: qué pregunta responde, con qué fuentes y qué trampas encontramos. Este README
 explica cómo correr el código.
 

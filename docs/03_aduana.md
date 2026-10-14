@@ -8,7 +8,7 @@
 - **Deflactor**: índice de precios al consumidor de Estados Unidos (CPI-U). Como sensibilidad, el índice de precios de importación de computadoras.
 
 ## Procedimiento
-1. **Canasta por componentes.** Ninguna posición "es de IA": la canasta se arma por capas (cómputo, red, almacenamiento, energía, refrigeración, estructura). La base común está a 6 dígitos del SA en `config/canasta_sa6.csv`; cada país la extiende a su nomenclatura nacional (ejemplo: `canasta_ar_ncm8.csv`).
+1. **Canasta por componentes** (explicada posición por posición en [canasta.md](canasta.md)). Ninguna posición "es de IA": la canasta se arma por capas (cómputo, red, almacenamiento, energía, refrigeración, estructura). La base común está a 6 dígitos del SA en `config/canasta_sa6.csv`; cada país la extiende a su nomenclatura nacional (ejemplo: `canasta_ar_ncm8.csv`).
 2. **Dos canastas.** La de AEE estricta (cómputo, red y almacenamiento) alimenta el RAEE; la de inversión suma energía, refrigeración y estructura. Mezclarlas infla el residuo.
 3. **Empalmar códigos** que cruzan enmiendas del SA: ningún código entra sin un predecesor identificado o una justificación de su creación.
 4. **Control de códigos vacíos** después de cada carga: listar las posiciones sin registros en algún año.
