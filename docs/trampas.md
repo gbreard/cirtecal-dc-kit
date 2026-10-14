@@ -22,3 +22,6 @@ Errores que cometimos o casi cometimos. Revisarlos antes de leer cualquier resul
 13. **La compensación no es validación.** Que el resultado final no cambie al corregir los datos puede deberse a que dos componentes se mueven en sentidos opuestos.
 14. **Retiro no es descarte.** Definir qué evento representa la vida útil antes de interpretar el residuo.
 15. **Redondeos.** Usar el mismo valor de f, sin redondear, en todas las cifras derivadas (en Argentina, 503 t y 1.500 t, no 504 y 1.501).
+
+## Aportadas por los equipos país
+Cada trampa nueva se suma acá con el país que la encontró y el *issue* donde se discutió (ver [CONTRIBUTING.md](../CONTRIBUTING.md)).

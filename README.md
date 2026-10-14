@@ -129,3 +129,7 @@ El código va con licencia MIT, y la documentación y los datos propios con CC B
 
 Cita sugerida: *Kit de réplica CIRTECAL — métodos para medir infraestructura de centros de
 datos y RAEE desde fuentes públicas (v1.0, oct-2026).*
+
+## Cómo aportar
+
+Errores, clasificaciones arancelarias que el kit no mira y trampas nuevas: ver [CONTRIBUTING.md](CONTRIBUTING.md). Todo aporte trae su fuente.
