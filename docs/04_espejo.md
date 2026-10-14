@@ -28,5 +28,8 @@ Lo que la aduana propia no muestra, ¿está oculto o solo mal atribuido?
 ## Resultado en Argentina
 En 2023–2025 la brecha se explica sobre todo por atribución de origen (US$ 712 millones) y triangulación (US$ 223 millones). El secreto estadístico genuino es acotado: US$ 53–263 millones. La opacidad es de origen, no de volumen.
 
+## Cuando la aduana propia no publica
+Si la estadística nacional no tiene el detalle necesario (puede ser el caso de Cuba), el espejo se usa como fuente principal: lo que los socios declaran exportar al país es la mejor aproximación a lo que entró. Ver [canasta.md](canasta.md#cuba-cuando-la-fuente-propia-no-alcanza).
+
 ## En el kit
 `kit/espejo.py` clasifica las celdas con los umbrales de la configuración. Antes hay que bajar los datos de Comtrade; si faltan, el módulo lo avisa. Se corre con `python -m kit.espejo`.

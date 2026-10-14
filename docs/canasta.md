@@ -82,7 +82,8 @@ La canasta común está a 6 dígitos porque es lo único que comparten todas las
 |---|---|---|---|
 | NCM (MERCOSUR) | Argentina, Brasil, Paraguay, Uruguay | 8 | La vigencia del SA2022 puede diferir por país (en Argentina, en la serie del INDEC desde 2024) |
 | TIGIE + NICO | México | 8 + 2 | Regímenes temporales (IMMEX); ver abajo |
-| Arancel nacional (base NANDINA) | Colombia, Perú, Ecuador, Bolivia | 10 | Subpartidas nacionales de 8471 y 8473 |
+| Arancel nacional (base NANDINA) | Colombia, Perú, Ecuador, Bolivia | 10 | Subpartidas nacionales de 8471 y 8473. En Ecuador, economía dolarizada: el valor no requiere conversión cambiaria |
+| Arancel de Aduanas de Cuba (base SA) | Cuba | verificar | Nivel de apertura y disponibilidad de la estadística por posición; ver abajo |
 | SACH | Chile | 8 | Aperturas nacionales de 8471 |
 | NC / TARIC | España (UE) | 8 / 10 | Estadística intracomunitaria (Intrastat) además de la extracomunitaria |
 
@@ -97,3 +98,14 @@ En Argentina, el cómputo de IA entra mayormente como sistema completo y no apar
 3. **¿Qué dice el espejo?** El cruce con las exportaciones de Estados Unidos y de Asia hacia México (método 4) muestra si el volumen es consistente con lo declarado, y la exportación mexicana de servidores muestra cuánto vuelve a salir.
 
 Lo mismo vale para cualquier país con zonas francas o regímenes especiales. En Argentina, el área aduanera especial de Tierra del Fuego cumple un papel análogo para la electrónica de consumo: lo que se ensambla allí no se registra como importación de bien final.
+
+## Cuba: cuando la fuente propia no alcanza
+
+En Cuba, el método se invierte. Si la estadística oficial no publica las importaciones por posición arancelaria con el detalle necesario, o si la declaración del país a UN Comtrade es escasa o está desactualizada, el **cruce espejo deja de ser un control y pasa a ser la fuente principal**: lo que los socios declaran haber exportado a Cuba es la mejor aproximación disponible a lo que entró.
+
+Tres cuidados:
+1. **Verificar primero qué publica la fuente nacional** (la Oficina Nacional de Estadística e Información y la Aduana General de la República): nivel de apertura, años y si incluye valor y peso.
+2. **Leer el espejo con sus límites**: el valor es FOB del exportador, la atribución de origen y la triangulación pesan más, y los envíos no comerciales quedan fuera.
+3. **Tener en cuenta las restricciones de exportación**: el embargo de Estados Unidos alcanza al equipamiento informático de origen estadounidense, de modo que la procedencia declarada y el papel de los centros de reexpedición son, en sí mismos, un resultado a analizar.
+
+El kit todavía no tiene un modo que use la suma de los socios como serie de importación: es una adaptación pendiente, que conviene plantear como issue cuando el equipo de Cuba confirme qué publica su fuente nacional.
