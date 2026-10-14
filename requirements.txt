@@ -1,0 +1,4 @@
+# Kit de réplica CIRTECAL — dependencias (Python 3.10 o más nuevo)
+pyyaml>=6.0
+requests>=2.28
+pytest>=7.0

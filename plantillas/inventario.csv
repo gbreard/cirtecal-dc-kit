@@ -1,0 +1,2 @@
+id,nombre,alias,operador,operador_tipo,tipo,tipo_uso,estado,provincia,localidad,direccion,lat,lon,capacidad_mw,base_mw,mayor_1mw,confianza,flags,en_conteo_base,fuente,fuente_url,descubierto_por,fecha_relevamiento,motivacion_energetica_fuente,notas
+1,EJEMPLO — DC Centro (borrar esta fila),,Operador SA,telco,colo,interconexion,operativo,Capital,Ciudad,Calle 123,-34.60,-58.38,4.0,IT,si,alta,,sí,Sitio web del operador (ficha del DC),https://operador.example/dc-centro,Directorio X,2026-10-14,,"'4 MW IT' textual en la ficha del operador"

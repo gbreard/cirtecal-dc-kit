@@ -1,0 +1,17 @@
+metrica,valor
+registros,41
+operativos,33
+conteo_base,39
+operativos_conteo_base,31
+comparables_referencia,3
+mw_it,7.6
+mw_no_aclara,3.5
+cobertura_n,0.231
+cobertura_mw_it,0.237
+cobertura_mw_it_mas_no_aclara_cota,0.347
+tipo_uso:computo_intensivo,2
+tipo_uso:corporativo_academico,3
+tipo_uso:ia_escala_anunciado,6
+tipo_uso:interconexion,15
+tipo_uso:publico,9
+tipo_uso:transaccional,6

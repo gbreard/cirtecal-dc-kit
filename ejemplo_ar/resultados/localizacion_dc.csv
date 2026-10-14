@@ -1,0 +1,42 @@
+id,nombre,estado,provincia,lat,lon,aterrizaje_mas_cercano,dist_aterrizaje_km,dist_nodo_principal_km,ixp_mas_cercano,dist_ixp_km,logica,region_principal
+1,DC Benavidez,operativo,Buenos Aires,-34.409311,-58.68455,Las Toninas — Cirion (ex Global Crossing),292.2,35.6,,,conectividad,dentro
+2,ARSAT Bariloche (DC de respaldo),anunciado,Rio Negro,-41.1334781,-71.3101474,Las Toninas — Telefónica/Telxius,1364.0,1345.0,,,mixta,fuera
+3,Telecom Pacheco,operativo,Buenos Aires,-34.4537215,-58.6351056,Las Toninas — Cirion (ex Global Crossing),285.5,29.0,,,conectividad,dentro
+4,Movistar Pacheco,operativo,Buenos Aires,-34.4537215,-58.6351056,Las Toninas — Cirion (ex Global Crossing),285.5,29.0,,,conectividad,dentro
+5,Cirion BUE1,operativo,CABA,-34.6095579,-58.3887904,Las Toninas — Cirion (ex Global Crossing),258.2,0.9,,,conectividad,dentro
+6,KIO Buenos Aires,operativo,CABA,-34.6095579,-58.3887904,Las Toninas — Cirion (ex Global Crossing),258.2,0.9,,,conectividad,dentro
+8,Claro DC San Telmo (modular),operativo,CABA,-34.6214013,-58.37375,Las Toninas — Cirion (ex Global Crossing),256.3,1.7,,,conectividad,dentro
+9,COTO ACDC,operativo,CABA,-34.6095579,-58.3887904,Las Toninas — Cirion (ex Global Crossing),258.2,0.9,,,conectividad,dentro
+11,NextStream Barracas,operativo,CABA,-34.6452854,-58.3875619,Las Toninas — Cirion (ex Global Crossing),254.9,4.4,,,conectividad,dentro
+12,G2K Group,operativo,,,,,,,,,sin_dato,sin_dato
+13,SkyOnline Argentina,operativo,CABA,-34.613314,-58.370753,Las Toninas — Cirion (ex Global Crossing),256.9,1.1,,,conectividad,dentro
+14,Stargate Argentina,anunciado,Patagonia,,,,,,,,sin_dato,fuera
+15,AWS Bahia Blanca,anunciado,Buenos Aires,-38.7176522,-62.2654871,Las Toninas — Telefónica/Telxius,548.1,573.5,,,mixta,fuera
+16,Microsoft Region Argentina,anunciado,,,,,,,,,sin_dato,sin_dato
+39,Atlas GigaHub (Chubut),anunciado,Chubut,,,,,,,,sin_dato,fuera
+40,Pampa Energía DC Loma de la Lata,anunciado,Neuquén,,,,,,,,sin_dato,fuera
+41,FlexDomes Neuquén,anunciado,Neuquén,,,,,,,,sin_dato,fuera
+42,Data center Zona Franca Bahía Blanca,anunciado,Buenos Aires,,,,,,,,sin_dato,sin_dato
+51,NextStream Vélez,operativo,CABA,-34.6560414,-58.387702,Las Toninas — Cirion (ex Global Crossing),253.9,5.5,,,conectividad,dentro
+76,Banco Nación — CPC Centro de Procesamiento Central,operativo,,,,,,,,,sin_dato,sin_dato
+77,Banco Nación — CPP Centro de Procesamiento Paralelo,operativo,,,,,,,,,sin_dato,sin_dato
+78,Banco Provincia — Centro de Procesamiento Evita,operativo,,,,,,,,,sin_dato,sin_dato
+79,Provincia NET — CPD Mitre,operativo,,,,,,,,,sin_dato,sin_dato
+80,First Data — Parque Patricios Data Center,operativo,CABA,-34.6369698,-58.4125638,Las Toninas — Cirion (ex Global Crossing),257.0,4.5,,,conectividad,dentro
+81,Prisma — Data Center DT,operativo,,,,,,,,,sin_dato,sin_dato
+88,EdgeConneX Buenos Aires (EDCBUE01),operativo,Buenos Aires,-34.417162,-58.958071,Las Toninas — Cirion (ex Global Crossing),307.3,57.1,,,mixta,dentro
+89,Datacenter SYT,operativo,CABA,-34.606738,-58.379375,Las Toninas — Cirion (ex Global Crossing),257.9,0.0,,,conectividad,dentro
+90,IPLAN Ringo DCI,operativo,CABA,-34.640792,-58.403794,Las Toninas — Cirion (ex Global Crossing),256.2,4.4,,,conectividad,dentro
+91,UNRC — Data Center UTI,operativo,Córdoba,,,,,,,,sin_dato,fuera
+200,GDA — Bajo del Toro (minería cripto),operativo,Neuquén,,,,,,,,sin_dato,fuera
+201,Unblock — Los Toldos II (Vaca Muerta),operativo,,,,,,,,,sin_dato,sin_dato
+202,Gobierno de San Juan — Data Center Centro Cívico,operativo,San Juan,,,,,,,,sin_dato,fuera
+203,Ministerio de Justicia de la Nación — Data Center,operativo,,,,,,,,,sin_dato,sin_dato
+204,Poder Judicial de la Nación — Centro de Datos,operativo,,,,,,,,,sin_dato,sin_dato
+205,Poder Judicial de Salta — Data Center,operativo,Salta,,,,,,,,sin_dato,fuera
+206,EMPATEL — Data Center Santa Rosa,operativo,La Pampa,,,,,,,,sin_dato,fuera
+207,Gendarmería Nacional — Data Center,operativo,,,,,,,,,sin_dato,sin_dato
+208,Data Center TDF — Ushuaia,operativo,Tierra del Fuego,-54.805706,-68.306551,Las Toninas — Telefónica/Telxius,2218.0,2373.6,,,mixta,fuera
+209,UNC — Data Center (CPD Ciudad Universitaria),operativo,Córdoba,,,,,,,,sin_dato,fuera
+210,BCRA — Centro de Procesamiento de Datos,operativo,CABA,-34.6051653,-58.3736909,Las Toninas — Cirion (ex Global Crossing),257.8,0.5,,,conectividad,dentro
+211,Gobierno de Santiago del Estero — Data Center Complejo Juan Felipe Ibarra,operativo,Santiago del Estero,,,,,,,,sin_dato,fuera

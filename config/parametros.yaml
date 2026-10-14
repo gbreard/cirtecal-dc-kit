@@ -1,0 +1,115 @@
+# Parámetros técnicos de los seis métodos. Cada valor lleva su fuente y su estado:
+#   verificado     -> leído en la fuente citada
+#   parcial        -> la fuente cubre una parte o es un cálculo propio sobre la fuente
+#   supuesto       -> sin fuente; es una decisión declarada (cambiarla es legítimo)
+# Los valores son los de la corrida argentina (oct-2026). No dependen del país salvo
+# donde se indica; un equipo puede dejarlos como están y cambiar solo lo que tenga mejor.
+
+# ---------------------------------------------------------------------------
+# Vida útil (años, rango [a, b] inclusive) por tipo de equipo y escenario.
+# Es UN solo parámetro compartido por raee.py (calendario de bajas) y mwbom.py (ciclo de
+# reposición del parque). Nunca se cruza un f de un escenario con un RAEE de otro.
+# ---------------------------------------------------------------------------
+vida_util:
+  _estado: supuesto
+  _fuente: >-
+    Base de la spec del Bloque C: corto 3–5 (reposición de hiperescala), central 5–7
+    (servidor empresarial), largo 7–10 (con reúso / mercado secundario). Almacenamiento
+    = base; cómputo cicla más corto y red más largo (supuesto propio).
+  computo:        {corto: [3, 4], central: [4, 6], largo: [6, 9]}
+  almacenamiento: {corto: [3, 5], central: [5, 7], largo: [7, 10]}
+  red:            {corto: [4, 6], central: [6, 8], largo: [8, 10]}
+  baterias:       {corto: [3, 5], central: [4, 7], largo: [6, 10]}
+
+raee:
+  distribucion: uniforme      # uniforme (default reportable) | triangular (sensibilidad)
+  anio_proyeccion_max: 2030   # "comprometido": solo cohortes ya importadas
+  anio_inicio_canasta: 2007   # primer año con la canasta completa (nacimientos SA2007)
+  segunda_vida:               # variante B: fracción q a segunda vida durante d años
+    q: [0.0, 0.25, 0.50]
+    d: [1, 2]
+    _estado: supuesto (no hay dato local de reventa de servidores retirados)
+
+# ---------------------------------------------------------------------------
+# MW -> equipo (BoM) -> aduana
+# ---------------------------------------------------------------------------
+mwbom:
+  ventana: [2016, 2025]       # años de importación contra los que se compara el parque
+  unidades:
+    servidor_cpu: {kw: 0.4, kg: 30.0, usd: 10000,
+                   _fuente: "Dell PowerEdge R760 25,1–36,1 kg; pico promedio ~0,33 kW (SPEC 2016)",
+                   _estado: "verificado kg/kW; usd supuesto"}
+    dgx_h100: {kw: 10.2, kg: 130.45, usd: 290000, _fuente: "NVIDIA DGX H100 (ficha); precio SemiAnalysis/revendedores", _estado: "verificado kW/kg; usd parcial"}
+    dgx_b200: {kw: 14.3, kg: 142.4, usd: 500000, _fuente: "NVIDIA DGX B200 (ficha)", _estado: "verificado kW/kg; usd parcial"}
+    gb200_nvl72: {kw: 132.0, kg: 1360.0, usd: 3000000, _fuente: "HPE / NVIDIA GB200 NVL72; SemiAnalysis", _estado: "verificado kW/kg; usd parcial"}
+    almacenamiento: {kw: 1.23, kg: 49.9, usd: 60000, _fuente: "NetApp AFF A400", _estado: verificado}
+    switch: {kw: 0.94, kg: 23.5, usd: 30000, _fuente: "NVIDIA Spectrum SN5600", _estado: verificado}
+    rack_vacio: {kg: 134.0, usd: 1500, _fuente: "APC AR3300 42U", _estado: "verificado kg; usd supuesto"}
+    ups: {kg_kw: 3.111, usd_kw: 250, _fuente: "Liebert EXL S1 1,8 kg/kVA; Galaxy VX 3,4–3,8 -> 2,8 kg/kVA / fp 0,9", _estado: "verificado kg"}
+    bateria_plomo: {kg_kwh: 50.0, usd_kwh: 200, _estado: "supuesto (inferido de 'Li-ion pesa 60–80 % menos')"}
+    bateria_litio: {kg_kwh: 15.0, usd_kwh: 500, _fuente: "gabinete Schneider (cálculo propio)", _estado: parcial}
+    autonomia_min: 10         # ABB: descargas de 1–15 min (parcial)
+    genset: {kg_kw: 8.0, usd_kw: 350, _fuente: "Cat 3516C 6,5–9,6 kg/kW en seco", _estado: verificado}
+    transformador: {kg_kva: 2.4, usd_kva: 40, fp: 0.9, _fuente: "Trihal 2.000 kVA 2,6 kg/kVA; aceite 2.500 kVA 2,0–2,6", _estado: verificado}
+    chiller: {kg_kw: 8.2, usd_kw: 300, _fuente: "Carrier 30XA702", _estado: verificado}
+    crah: {kg_kw: 11.0, usd_kw: 400, _fuente: "Vertiv Liebert PDX 11–25 kg/kW", _estado: "verificado solo unidades chicas"}
+  # IEA, Energy and AI (2025): % del consumo TOTAL; se normaliza dentro de IT (verificado)
+  reparto_it: {servidores: 0.60, almacenamiento: 0.05, red: 0.05}
+  redundancia: {"N": 1.0, "N+1": 1.25, "2N": 2.0}
+  perfiles:
+    convencional:
+      pue: 1.55               # Uptime Institute 2024–25: promedio ~1,54–1,56 (verificado)
+      redundancia: "N+1"
+      bateria: plomo
+      refrigeracion: [chiller, crah]
+      kw_rack: {bajo: 10, central: 6, alto: 4}    # Uptime: promedio ~5 kW (verificado)
+      # participación de servidores acelerados (GPU) en la potencia de servidores: SUPUESTO
+      arquitectura:
+        bajo:    {share_gpu: 0.15, servidor_gpu: dgx_h100}
+        central: {share_gpu: 0.05, servidor_gpu: dgx_h100}
+        alto:    {share_gpu: 0.0,  servidor_gpu: dgx_h100}
+      usd_mw: 12500000        # obra sin IT: T&T 2025 ~11,6–13,3 US$/W; C&W 2026 (verificado)
+      capex_split: {electrica: 0.45, mecanica: 0.175}   # supuesto (fuentes secundarias)
+    ia:
+      pue: 1.2                # hiperescala eficiente 1,08–1,2 (verificado)
+      redundancia: "N+1"
+      bateria: litio
+      refrigeracion: [chiller]
+      kw_rack: {bajo: 132, central: 60, alto: 40}  # HPE, NVIDIA (verificado)
+      arquitectura:
+        bajo:    {share_gpu: 0.95, servidor_gpu: gb200_nvl72}
+        central: {share_gpu: 0.95, servidor_gpu: dgx_b200}
+        alto:    {share_gpu: 0.95, servidor_gpu: dgx_h100}
+      usd_mw: 38000000        # Epoch AI 2026, ~US$38.000 M por GW con IT (verificado)
+      capex_split: {it: 0.6431, electrica: 0.1606, mecanica: 0.0625}  # derivado de lo anterior
+  # tipo de vida de cada familia IT (el resto de las familias se compra una vez)
+  tipo_vida: {servidores: computo, almacenamiento: almacenamiento, red: red}
+  tolerancia_vias: 3.0        # física vs económica fuera de [1/3, 3] -> supuesto roto
+
+# ---------------------------------------------------------------------------
+# Espejo (aduana propia vs exportaciones declaradas por los socios en Comtrade)
+# ---------------------------------------------------------------------------
+espejo:
+  material_usd: 50000         # espejo mínimo para evaluar causa (evita ruido)
+  ratio_pais_brecha: 3.0      # brecha por país "fuerte" -> se evalúa la causa
+  ratio_pais_secreto: 10.0    # brecha por país mínima para marcar secreto
+  ratio_valuacion: 1.3        # brecha moderada compatible con FOB (espejo) vs CIF (aduana)
+  sys_secreto: 1.8            # total SA6 corto (>=) -> subregistro sistémico posible
+  sys_atribucion: 1.3         # total SA6 ~coincide (<) -> es atribución de origen
+  hubs_m49:                   # centros de redespacho: brecha -> triangulación probable
+    344: Hong Kong
+    372: Irlanda
+    528: Países Bajos
+    702: Singapur
+  cortes_sensibilidad:        # se reclasifica sin volver a bajar nada
+    estricto: {sys_secreto: 2.0, ratio_pais_secreto: 20.0}
+    laxo:     {sys_secreto: 1.5, ratio_pais_secreto: 5.0}
+  _estado: supuesto (umbrales de la corrida argentina; leer siempre los tres cortes)
+
+# ---------------------------------------------------------------------------
+# Localización
+# ---------------------------------------------------------------------------
+localizacion:
+  umbral_nodo_km: 50.0        # logica = conectividad si el nodo principal está a < X km
+  region_principal_km: 60.0   # dentro de la región principal si está a <= X km del nodo
+  _estado: supuesto (decisión de la corrida argentina)

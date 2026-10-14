@@ -1,0 +1,13 @@
+ambito,variable,valor,n
+todos,logica,conectividad,14
+todos,logica,mixta,4
+todos,logica,sin_dato,23
+todos,region_principal,dentro,15
+todos,region_principal,fuera,14
+todos,region_principal,sin_dato,12
+operativos,logica,conectividad,14
+operativos,logica,mixta,2
+operativos,logica,sin_dato,17
+operativos,region_principal,dentro,15
+operativos,region_principal,fuera,8
+operativos,region_principal,sin_dato,10

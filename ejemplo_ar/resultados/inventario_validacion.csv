@@ -1,0 +1,23 @@
+fila,nombre,nivel,campo,motivo
+4,Telecom Pacheco,aviso,tipo_uso,la regla sugiere 'corporativo_academico'
+5,Movistar Pacheco,aviso,tipo_uso,la regla sugiere 'corporativo_academico'
+8,Claro DC San Telmo (modular),aviso,tipo_uso,la regla sugiere 'corporativo_academico'
+11,G2K Group,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+20,NextStream Vélez,aviso,fuente,la fuente es un directorio: buscar fuente primaria
+21,Banco Nación — CPC Centro de Procesamiento Central,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+22,Banco Nación — CPP Centro de Procesamiento Paralelo,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+23,Banco Provincia — Centro de Procesamiento Evita,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+24,Provincia NET — CPD Mitre,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+26,Prisma — Data Center DT,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+30,UNRC — Data Center UTI,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+31,GDA — Bajo del Toro (minería cripto),aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+32,Unblock — Los Toldos II (Vaca Muerta),aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+33,Gobierno de San Juan — Data Center Centro Cívico,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+34,Ministerio de Justicia de la Nación — Data Center,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+35,Poder Judicial de la Nación — Centro de Datos,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+36,Poder Judicial de Salta — Data Center,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+37,EMPATEL — Data Center Santa Rosa,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+38,Gendarmería Nacional — Data Center,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+40,UNC — Data Center (CPD Ciudad Universitaria),aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización
+41,BCRA — Centro de Procesamiento de Datos,aviso,tipo_uso,la regla sugiere 'transaccional'
+42,Gobierno de Santiago del Estero — Data Center Complejo Juan Felipe Ibarra,aviso,lat/lon,operativo sin coordenada: queda 'sin_dato' en localización

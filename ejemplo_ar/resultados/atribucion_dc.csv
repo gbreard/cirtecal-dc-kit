@@ -1,0 +1,7 @@
+caso,escenario_vida,escenario_bom,mw,base_mw,stock_it_dc_kg,flujo_it_dc_kg_anio,masa_it_importada_kg_anio,f_atribucion,anio_raee,raee_it_kg,raee_dc_kg,ventana,confianza
+parque_referencia,corto,central,32.0,IT,2121697,597990,2571326,0.2326,2026,2465314.7,573336,2016-2025,estimada
+parque_referencia,central,central,32.0,IT,2121697,417983,2571326,0.1626,2026,3097163.9,503461,2016-2025,estimada
+parque_referencia,largo,central,32.0,IT,2121697,280169,2571326,0.109,2026,2946819.8,321082,2016-2025,estimada
+inventario_propio,corto,central,23.1,IT,1531600,431674,2571326,0.1679,2026,2465314.7,413877,2016-2025,estimada
+inventario_propio,central,central,23.1,IT,1531600,301732,2571326,0.1173,2026,3097163.9,363436,2016-2025,estimada
+inventario_propio,largo,central,23.1,IT,1531600,202247,2571326,0.0787,2026,2946819.8,231781,2016-2025,estimada

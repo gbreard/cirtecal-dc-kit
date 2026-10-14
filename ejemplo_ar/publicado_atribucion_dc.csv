@@ -1,0 +1,4 @@
+caso,escenario_vida,escenario_bom,masa_it_esperada_dc,masa_it_importada_total,f_atribucion,stock_it_dc_kg,anio_raee,raee_it_kg,raee_dc_kg,ventana_anios,unidad,confianza
+parque_cabase,corto,central,597990,2571326,0.2326,2121697,2026,2465314.6,573335,2016-2025,kg/año,estimada
+parque_cabase,central,central,417983,2571326,0.1626,2121697,2026,3097163.7,503461,2016-2025,kg/año,estimada
+parque_cabase,largo,central,280169,2571326,0.109,2121697,2026,2946819.9,321082,2016-2025,kg/año,estimada

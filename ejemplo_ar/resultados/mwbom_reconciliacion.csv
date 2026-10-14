@@ -1,0 +1,49 @@
+caso,escenario_bom,subsistema_capex,usd_fisico,usd_economico,ratio_fis_eco,consistente
+parque_referencia,bajo,electrica,35788889,180000000,0.2,False
+parque_referencia,bajo,mecanica,28000000,70000000,0.4,True
+parque_referencia,central,electrica,35788889,180000000,0.2,False
+parque_referencia,central,mecanica,28000000,70000000,0.4,True
+parque_referencia,alto,electrica,35788889,180000000,0.2,False
+parque_referencia,alto,mecanica,28000000,70000000,0.4,True
+inventario_propio,bajo,electrica,25835104,129937500,0.2,False
+inventario_propio,bajo,mecanica,20212500,50531250,0.4,True
+inventario_propio,central,electrica,25835104,129937500,0.2,False
+inventario_propio,central,mecanica,20212500,50531250,0.4,True
+inventario_propio,alto,electrica,25835104,129937500,0.2,False
+inventario_propio,alto,mecanica,20212500,50531250,0.4,True
+anuncio: Stargate Argentina,bajo,it,10563850638,10182416667,1.04,True
+anuncio: Stargate Argentina,bajo,electrica,420138889,2542833333,0.17,False
+anuncio: Stargate Argentina,bajo,mecanica,156250000,989583333,0.16,False
+anuncio: Stargate Argentina,central,it,14721630358,10182416667,1.45,True
+anuncio: Stargate Argentina,central,electrica,420138889,2542833333,0.17,False
+anuncio: Stargate Argentina,central,mecanica,156250000,989583333,0.16,False
+anuncio: Stargate Argentina,alto,it,12510060371,10182416667,1.23,True
+anuncio: Stargate Argentina,alto,electrica,420138889,2542833333,0.17,False
+anuncio: Stargate Argentina,alto,mecanica,156250000,989583333,0.16,False
+anuncio: Atlas GigaHub (Chubut),bajo,it,6338310383,6109450000,1.04,True
+anuncio: Atlas GigaHub (Chubut),bajo,electrica,252083333,1525700000,0.17,False
+anuncio: Atlas GigaHub (Chubut),bajo,mecanica,93750000,593750000,0.16,False
+anuncio: Atlas GigaHub (Chubut),central,it,8832978215,6109450000,1.45,True
+anuncio: Atlas GigaHub (Chubut),central,electrica,252083333,1525700000,0.17,False
+anuncio: Atlas GigaHub (Chubut),central,mecanica,93750000,593750000,0.16,False
+anuncio: Atlas GigaHub (Chubut),alto,it,7506036223,6109450000,1.23,True
+anuncio: Atlas GigaHub (Chubut),alto,electrica,252083333,1525700000,0.17,False
+anuncio: Atlas GigaHub (Chubut),alto,mecanica,93750000,593750000,0.16,False
+anuncio: Pampa Energía DC Loma de la Lata,bajo,it,10563850638,10182416667,1.04,True
+anuncio: Pampa Energía DC Loma de la Lata,bajo,electrica,420138889,2542833333,0.17,False
+anuncio: Pampa Energía DC Loma de la Lata,bajo,mecanica,156250000,989583333,0.16,False
+anuncio: Pampa Energía DC Loma de la Lata,central,it,14721630358,10182416667,1.45,True
+anuncio: Pampa Energía DC Loma de la Lata,central,electrica,420138889,2542833333,0.17,False
+anuncio: Pampa Energía DC Loma de la Lata,central,mecanica,156250000,989583333,0.16,False
+anuncio: Pampa Energía DC Loma de la Lata,alto,it,12510060371,10182416667,1.23,True
+anuncio: Pampa Energía DC Loma de la Lata,alto,electrica,420138889,2542833333,0.17,False
+anuncio: Pampa Energía DC Loma de la Lata,alto,mecanica,156250000,989583333,0.16,False
+anuncio: FlexDomes Neuquén,bajo,it,3042388984,2932536000,1.04,True
+anuncio: FlexDomes Neuquén,bajo,electrica,121000000,732336000,0.17,False
+anuncio: FlexDomes Neuquén,bajo,mecanica,45000000,285000000,0.16,False
+anuncio: FlexDomes Neuquén,central,it,4239829543,2932536000,1.45,True
+anuncio: FlexDomes Neuquén,central,electrica,121000000,732336000,0.17,False
+anuncio: FlexDomes Neuquén,central,mecanica,45000000,285000000,0.16,False
+anuncio: FlexDomes Neuquén,alto,it,3602897387,2932536000,1.23,True
+anuncio: FlexDomes Neuquén,alto,electrica,121000000,732336000,0.17,False
+anuncio: FlexDomes Neuquén,alto,mecanica,45000000,285000000,0.16,False

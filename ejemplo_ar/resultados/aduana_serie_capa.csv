@@ -1,0 +1,341 @@
+anio,capa,canasta,valor_usd,kg,valor_usd_2025,deflactor_meses,variante
+2002,Cómputo,aee_estricta,40479766.0,328653.0,72458895.24,12,con_sensibles
+2002,Energía,aee_estricta,2548179.0,1118139.0,4561247.59,12,con_sensibles
+2002,Energía,inversion,51827883.0,4373604.0,92772056.66,12,con_sensibles
+2002,Infraestructura física,inversion,955552.0,343660.0,1710440.77,12,con_sensibles
+2002,Red,inversion,804591.0,28035.0,1440220.16,12,con_sensibles
+2002,Refrigeración,inversion,26096370.0,3706213.0,46712575.86,12,con_sensibles
+2003,Cómputo,aee_estricta,76868491.0,890544.0,134503942.46,12,con_sensibles
+2003,Energía,aee_estricta,4657595.0,2347468.0,8149826.82,12,con_sensibles
+2003,Energía,inversion,68252570.0,4590068.0,119427864.77,12,con_sensibles
+2003,Infraestructura física,inversion,1503529.0,602661.0,2630864.42,12,con_sensibles
+2003,Red,inversion,637246.0,19693.0,1115048.55,12,con_sensibles
+2003,Refrigeración,inversion,34581049.0,6320100.0,60509675.22,12,con_sensibles
+2004,Cómputo,aee_estricta,112742444.0,1336647.0,192150220.4,12,con_sensibles
+2004,Energía,aee_estricta,7372901.0,3295438.0,12565849.22,12,con_sensibles
+2004,Energía,inversion,129007204.0,10599799.0,219870723.06,12,con_sensibles
+2004,Infraestructura física,inversion,3706973.0,1388798.0,6317901.7,12,con_sensibles
+2004,Red,inversion,1222940.0,60177.0,2084292.15,12,con_sensibles
+2004,Refrigeración,inversion,64263864.0,12075592.0,109526769.1,12,con_sensibles
+2005,Cómputo,aee_estricta,149494673.0,1900743.0,246491536.75,12,con_sensibles
+2005,Energía,aee_estricta,9403563.0,3909353.0,15504891.57,12,con_sensibles
+2005,Energía,inversion,176556296.0,13175263.0,291111595.15,12,con_sensibles
+2005,Infraestructura física,inversion,4439110.0,1380293.0,7319344.72,12,con_sensibles
+2005,Red,inversion,2666107.0,153128.0,4395961.4,12,con_sensibles
+2005,Refrigeración,inversion,95235454.0,18115600.0,157027223.37,12,con_sensibles
+2006,Cómputo,aee_estricta,168054297.0,1978415.0,268443823.77,12,con_sensibles
+2006,Energía,aee_estricta,11917844.0,4371874.0,19037130.69,12,con_sensibles
+2006,Energía,inversion,207471553.0,13078655.0,331407515.34,12,con_sensibles
+2006,Infraestructura física,inversion,6027931.0,2147855.0,9628797.81,12,con_sensibles
+2006,Red,inversion,5374887.0,255087.0,8585649.07,12,con_sensibles
+2006,Refrigeración,inversion,124665596.0,23334945.0,199136290.36,12,con_sensibles
+2007,Cómputo,aee_estricta,239095637.0,3335672.0,371265198.5,12,con_sensibles
+2007,Energía,aee_estricta,17599569.0,5155016.0,27328426.23,12,con_sensibles
+2007,Energía,inversion,326286172.0,20506308.0,506653747.15,12,con_sensibles
+2007,Infraestructura física,inversion,12321102.0,4326282.0,19132078.01,12,con_sensibles
+2007,Red,aee_estricta,241335422.0,1035633.0,374743113.16,12,con_sensibles
+2007,Red,inversion,42609938.0,3855523.0,66164265.01,12,con_sensibles
+2007,Refrigeración,inversion,217853304.0,37297572.0,338280326.52,12,con_sensibles
+2008,Cómputo,aee_estricta,237853288.0,2646281.0,355764006.12,12,con_sensibles
+2008,Energía,aee_estricta,22771715.0,4857104.0,34060309.29,12,con_sensibles
+2008,Energía,inversion,472048580.0,27818460.0,706056642.37,12,con_sensibles
+2008,Infraestructura física,inversion,18666290.0,6327440.0,27919707.0,12,con_sensibles
+2008,Red,aee_estricta,223386433.0,1331630.0,334125514.87,12,con_sensibles
+2008,Red,inversion,51200385.0,4047641.0,76581888.93,12,con_sensibles
+2008,Refrigeración,inversion,221397556.0,31758636.0,331150694.32,12,con_sensibles
+2009,Cómputo,aee_estricta,177543502.0,1835207.0,266410286.67,12,con_sensibles
+2009,Energía,aee_estricta,26885632.0,5645407.0,40342839.07,12,con_sensibles
+2009,Energía,inversion,348279324.0,17127158.0,522605409.4,12,con_sensibles
+2009,Infraestructura física,inversion,83685059.0,17344937.0,125572382.58,12,con_sensibles
+2009,Red,aee_estricta,170185744.0,979999.0,255369711.29,12,con_sensibles
+2009,Red,inversion,35488989.0,2835020.0,53252479.68,12,con_sensibles
+2009,Refrigeración,inversion,144129756.0,20156196.0,216271782.3,12,con_sensibles
+2010,Cómputo,aee_estricta,237983731.0,2630786.0,351352849.15,12,con_sensibles
+2010,Energía,aee_estricta,28617051.0,6616264.0,42249452.77,12,con_sensibles
+2010,Energía,inversion,482776417.0,25244554.0,712758258.32,12,con_sensibles
+2010,Infraestructura física,inversion,183502403.0,41056020.0,270918065.91,12,con_sensibles
+2010,Red,aee_estricta,698058835.0,2642384.0,1030595492.9,12,con_sensibles
+2010,Red,inversion,62174142.0,5070244.0,91792249.17,12,con_sensibles
+2010,Refrigeración,inversion,188217584.0,24855605.0,277879433.69,12,con_sensibles
+2011,Cómputo,aee_estricta,583938250.0,11795385.0,835867690.07,12,con_sensibles
+2011,Energía,aee_estricta,30007245.0,6181983.0,42953320.09,12,con_sensibles
+2011,Energía,inversion,606827622.0,31882655.0,868632261.49,12,con_sensibles
+2011,Infraestructura física,inversion,193296201.0,44321327.0,276690299.07,12,con_sensibles
+2011,Red,aee_estricta,1354990515.0,4687548.0,1939576302.52,12,con_sensibles
+2011,Red,inversion,82567000.0,5765042.0,118189016.67,12,con_sensibles
+2011,Refrigeración,inversion,215442906.0,22633589.0,308391793.45,12,con_sensibles
+2012,Cómputo,aee_estricta,628611540.0,5283091.0,881538410.99,12,con_sensibles
+2012,Energía,aee_estricta,98926639.0,7318416.0,138730561.88,12,con_sensibles
+2012,Energía,inversion,558263488.0,25932133.0,782885258.72,12,con_sensibles
+2012,Infraestructura física,inversion,148221218.0,39499708.0,207859208.23,12,con_sensibles
+2012,Red,aee_estricta,1804069356.0,4395517.0,2529951062.32,12,con_sensibles
+2012,Red,inversion,91054885.0,5647257.0,127691544.82,12,con_sensibles
+2012,Refrigeración,inversion,196984807.0,17147208.0,276243216.52,12,con_sensibles
+2013,Cómputo,aee_estricta,531584437.0,4716115.0,734701379.5,12,con_sensibles
+2013,Energía,aee_estricta,128778030.0,9094092.0,177983758.94,12,con_sensibles
+2013,Energía,inversion,479664848.0,20022390.0,662943459.2,12,con_sensibles
+2013,Infraestructura física,inversion,194791660.0,40227915.0,269221014.3,12,con_sensibles
+2013,Red,aee_estricta,2030150127.0,5123565.0,2805864873.17,12,con_sensibles
+2013,Red,inversion,95427194.0,5411859.0,131889660.78,12,con_sensibles
+2013,Refrigeración,inversion,209323660.0,17243221.0,289305651.29,12,con_sensibles
+2014,Cómputo,aee_estricta,368591586.0,2948147.0,501330491.74,12,con_sensibles
+2014,Energía,aee_estricta,111313739.0,8219694.0,151400557.23,12,con_sensibles
+2014,Energía,inversion,647724915.0,26416826.0,880986605.46,12,con_sensibles
+2014,Infraestructura física,inversion,170171767.0,30610067.0,231454810.34,12,con_sensibles
+2014,Red,aee_estricta,1457663737.0,5009258.0,1982604339.93,12,con_sensibles
+2014,Red,inversion,81847347.0,4460314.0,111322591.94,12,con_sensibles
+2014,Refrigeración,inversion,183144582.0,14302641.0,249099455.44,12,con_sensibles
+2015,Cómputo,aee_estricta,376351436.0,3228044.0,511265414.03,12,con_sensibles
+2015,Energía,aee_estricta,140056955.0,10117294.0,190264391.83,12,con_sensibles
+2015,Energía,inversion,615502274.0,29268675.0,836146736.4,12,con_sensibles
+2015,Infraestructura física,inversion,172932155.0,30953851.0,234924651.18,12,con_sensibles
+2015,Red,aee_estricta,1931846311.0,4750343.0,2624372088.3,12,con_sensibles
+2015,Red,inversion,96161105.0,5726876.0,130632814.06,12,con_sensibles
+2015,Refrigeración,inversion,218761614.0,16958896.0,297182995.62,12,con_sensibles
+2016,Cómputo,aee_estricta,303757516.0,2187760.0,407483944.07,12,con_sensibles
+2016,Energía,aee_estricta,97576418.0,8810190.0,130896592.05,12,con_sensibles
+2016,Energía,inversion,470139814.0,20297219.0,630682092.07,12,con_sensibles
+2016,Infraestructura física,inversion,149619668.0,28876000.0,200711453.1,12,con_sensibles
+2016,Red,aee_estricta,1333677960.0,3143388.0,1789099286.89,12,con_sensibles
+2016,Red,inversion,87037125.0,5462579.0,116758365.17,12,con_sensibles
+2016,Refrigeración,inversion,178292092.0,17523735.0,239174871.46,12,con_sensibles
+2017,Cómputo,aee_estricta,339146249.3,2275533.4,445462325.96,12,con_sensibles
+2017,Energía,aee_estricta,100212821.5,10338479.7,131627687.61,12,con_sensibles
+2017,Energía,inversion,549610913.15,27851201.5,721903769.4,12,con_sensibles
+2017,Infraestructura física,inversion,182289392.87,39607419.2,239433746.1,12,con_sensibles
+2017,Red,aee_estricta,1566736214.77,4343235.5,2057879041.4,12,con_sensibles
+2017,Red,inversion,106349166.32,7207405.9,139687663.04,12,con_sensibles
+2017,Refrigeración,inversion,206569755.39,19404807.9,271325553.21,12,con_sensibles
+2018,Cómputo,aee_estricta,254648467.01,1710420.7,326512415.48,12,con_sensibles
+2018,Energía,aee_estricta,95474537.44,10545215.7,122418258.4,12,con_sensibles
+2018,Energía,inversion,493540295.98,25066083.8,632821536.56,12,con_sensibles
+2018,Infraestructura física,inversion,214128964.98,44733944.0,274557967.7,12,con_sensibles
+2018,Red,aee_estricta,1261465519.94,4172889.9,1617461745.58,12,con_sensibles
+2018,Red,inversion,125871327.66,9006773.6,161393279.59,12,con_sensibles
+2018,Refrigeración,inversion,191480209.21,17763564.1,245517541.73,12,con_sensibles
+2019,Cómputo,aee_estricta,248211702.08,1407760.2,312591036.45,12,con_sensibles
+2019,Energía,aee_estricta,83448789.65,10695258.3,105093125.86,12,con_sensibles
+2019,Energía,inversion,499995192.76,24267262.7,629680285.87,12,con_sensibles
+2019,Infraestructura física,inversion,181948050.8,31522832.4,229140404.35,12,con_sensibles
+2019,Red,aee_estricta,978897601.26,2871651.1,1232796895.5,12,con_sensibles
+2019,Red,inversion,113144040.88,8737052.2,142490513.98,12,con_sensibles
+2019,Refrigeración,inversion,154049771.51,12801241.9,194006073.59,12,con_sensibles
+2020,Cómputo,aee_estricta,308265531.14,1900282.9,383417161.64,12,con_sensibles
+2020,Energía,aee_estricta,63493029.19,7349215.1,78971907.58,12,con_sensibles
+2020,Energía,inversion,313021878.97,13089960.9,389333052.98,12,con_sensibles
+2020,Infraestructura física,inversion,123417830.09,23159448.0,153505693.4,12,con_sensibles
+2020,Red,aee_estricta,883213302.69,2710049.8,1098530660.85,12,con_sensibles
+2020,Red,inversion,137521932.83,9807873.4,171048215.98,12,con_sensibles
+2020,Refrigeración,inversion,116966406.9,10662911.9,145481486.61,12,con_sensibles
+2021,Cómputo,aee_estricta,753466677.37,3040948.7,895244931.91,12,con_sensibles
+2021,Energía,aee_estricta,108947568.59,8902293.2,129448005.54,12,con_sensibles
+2021,Energía,inversion,416253386.21,17415775.0,494578918.47,12,con_sensibles
+2021,Infraestructura física,inversion,148316971.97,26135742.3,176225467.51,12,con_sensibles
+2021,Red,aee_estricta,1323507214.15,3493723.7,1572548808.6,12,con_sensibles
+2021,Red,inversion,142042884.49,11842737.7,168770798.06,12,con_sensibles
+2021,Refrigeración,inversion,166947992.96,14242186.0,198362248.89,12,con_sensibles
+2022,Cómputo,aee_estricta,622612356.24,2575024.5,685028613.89,12,con_sensibles
+2022,Energía,aee_estricta,131276735.89,11912085.4,144437095.6,12,con_sensibles
+2022,Energía,inversion,497586365.69,20517424.8,547468894.51,12,con_sensibles
+2022,Infraestructura física,inversion,170134251.72,21486073.8,187190038.01,12,con_sensibles
+2022,Red,aee_estricta,1820250968.01,3959345.9,2002729282.58,12,con_sensibles
+2022,Red,inversion,200088333.66,16433945.6,220146986.3,12,con_sensibles
+2022,Refrigeración,inversion,192478887.24,16828686.4,211774700.59,12,con_sensibles
+2023,Cómputo,aee_estricta,395282612.45,1861927.2,417672096.9,12,con_sensibles
+2023,Energía,aee_estricta,172618737.64,9948622.7,182396158.71,12,con_sensibles
+2023,Energía,inversion,589037235.14,23793854.8,622401313.4,12,con_sensibles
+2023,Infraestructura física,inversion,174774418.79,20276648.3,184673941.33,12,con_sensibles
+2023,Red,aee_estricta,1682086336.67,3002776.0,1777362588.88,12,con_sensibles
+2023,Red,inversion,184669489.52,15615040.9,195129485.82,12,con_sensibles
+2023,Refrigeración,inversion,193534275.13,15041682.4,204496388.08,12,con_sensibles
+2024,Cómputo,aee_estricta,241671230.44,1126360.6,248037535.85,12,con_sensibles
+2024,Energía,aee_estricta,124119380.49,9227929.4,127389036.88,12,con_sensibles
+2024,Energía,inversion,587013878.36,24409399.9,602477488.25,12,con_sensibles
+2024,Infraestructura física,inversion,182872877.09,22147677.6,187690267.16,12,con_sensibles
+2024,Red,aee_estricta,806257587.58,1929846.3,827496698.38,12,con_sensibles
+2024,Red,inversion,146492050.11,13699309.5,150351066.05,12,con_sensibles
+2024,Refrigeración,inversion,205872951.4,13656186.7,211296228.64,12,con_sensibles
+2025,Cómputo,aee_estricta,342876689.25,2080541.1,342876689.25,11,con_sensibles
+2025,Energía,aee_estricta,157837491.08,13354604.2,157837491.08,11,con_sensibles
+2025,Energía,inversion,645449975.5,31140813.4,645449975.5,11,con_sensibles
+2025,Infraestructura física,inversion,224443225.22,36124673.1,224443225.22,11,con_sensibles
+2025,Red,aee_estricta,1029543264.09,2692578.9,1029543264.09,11,con_sensibles
+2025,Red,inversion,161379595.66,15731473.0,161379595.66,11,con_sensibles
+2025,Refrigeración,inversion,294051282.75,23703167.1,294051282.75,11,con_sensibles
+2026,Cómputo,aee_estricta,229814987.57,1098523.3,223350918.8,8,con_sensibles
+2026,Energía,aee_estricta,204124692.23,20850042.5,198383221.4,8,con_sensibles
+2026,Energía,inversion,403963455.26,18899078.0,392601065.1,8,con_sensibles
+2026,Infraestructura física,inversion,146573657.09,23896162.1,142450939.91,8,con_sensibles
+2026,Red,aee_estricta,365224302.21,1254084.4,354951538.76,8,con_sensibles
+2026,Red,inversion,114343764.53,11853224.1,111127586.31,8,con_sensibles
+2026,Refrigeración,inversion,156392692.89,11516306.8,151993793.01,8,con_sensibles
+2002,Cómputo,aee_estricta,39138004.0,291346.0,70057137.48,12,sin_sensibles
+2002,Energía,aee_estricta,2548179.0,1118139.0,4561247.59,12,sin_sensibles
+2002,Energía,inversion,51827883.0,4373604.0,92772056.66,12,sin_sensibles
+2002,Infraestructura física,inversion,955552.0,343660.0,1710440.77,12,sin_sensibles
+2002,Red,inversion,804591.0,28035.0,1440220.16,12,sin_sensibles
+2002,Refrigeración,inversion,26096370.0,3706213.0,46712575.86,12,sin_sensibles
+2003,Cómputo,aee_estricta,74638532.0,851078.0,130601975.96,12,sin_sensibles
+2003,Energía,aee_estricta,4657595.0,2347468.0,8149826.82,12,sin_sensibles
+2003,Energía,inversion,68252570.0,4590068.0,119427864.77,12,sin_sensibles
+2003,Infraestructura física,inversion,1503529.0,602661.0,2630864.42,12,sin_sensibles
+2003,Red,inversion,637246.0,19693.0,1115048.55,12,sin_sensibles
+2003,Refrigeración,inversion,34581049.0,6320100.0,60509675.22,12,sin_sensibles
+2004,Cómputo,aee_estricta,110308953.0,1232746.0,188002751.04,12,sin_sensibles
+2004,Energía,aee_estricta,7372901.0,3295438.0,12565849.22,12,sin_sensibles
+2004,Energía,inversion,129007204.0,10599799.0,219870723.06,12,sin_sensibles
+2004,Infraestructura física,inversion,3706973.0,1388798.0,6317901.7,12,sin_sensibles
+2004,Red,inversion,1222940.0,60177.0,2084292.15,12,sin_sensibles
+2004,Refrigeración,inversion,64263864.0,12075592.0,109526769.1,12,sin_sensibles
+2005,Cómputo,aee_estricta,145958891.0,1827526.0,240661627.75,12,sin_sensibles
+2005,Energía,aee_estricta,9403563.0,3909353.0,15504891.57,12,sin_sensibles
+2005,Energía,inversion,176556296.0,13175263.0,291111595.15,12,sin_sensibles
+2005,Infraestructura física,inversion,4439110.0,1380293.0,7319344.72,12,sin_sensibles
+2005,Red,inversion,2666107.0,153128.0,4395961.4,12,sin_sensibles
+2005,Refrigeración,inversion,95235454.0,18115600.0,157027223.37,12,sin_sensibles
+2006,Cómputo,aee_estricta,164490686.0,1873402.0,262751441.13,12,sin_sensibles
+2006,Energía,aee_estricta,11917844.0,4371874.0,19037130.69,12,sin_sensibles
+2006,Energía,inversion,207471553.0,13078655.0,331407515.34,12,sin_sensibles
+2006,Infraestructura física,inversion,6027931.0,2147855.0,9628797.81,12,sin_sensibles
+2006,Red,inversion,5374887.0,255087.0,8585649.07,12,sin_sensibles
+2006,Refrigeración,inversion,124665596.0,23334945.0,199136290.36,12,sin_sensibles
+2007,Cómputo,aee_estricta,236075002.0,3242356.0,366574788.14,12,sin_sensibles
+2007,Energía,aee_estricta,17599569.0,5155016.0,27328426.23,12,sin_sensibles
+2007,Energía,inversion,326286172.0,20506308.0,506653747.15,12,sin_sensibles
+2007,Infraestructura física,inversion,12321102.0,4326282.0,19132078.01,12,sin_sensibles
+2007,Red,aee_estricta,241335422.0,1035633.0,374743113.16,12,sin_sensibles
+2007,Red,inversion,42609938.0,3855523.0,66164265.01,12,sin_sensibles
+2007,Refrigeración,inversion,217853304.0,37297572.0,338280326.52,12,sin_sensibles
+2008,Cómputo,aee_estricta,231515344.0,2510639.0,346284160.93,12,sin_sensibles
+2008,Energía,aee_estricta,22771715.0,4857104.0,34060309.29,12,sin_sensibles
+2008,Energía,inversion,472048580.0,27818460.0,706056642.37,12,sin_sensibles
+2008,Infraestructura física,inversion,18666290.0,6327440.0,27919707.0,12,sin_sensibles
+2008,Red,aee_estricta,223386433.0,1331630.0,334125514.87,12,sin_sensibles
+2008,Red,inversion,51200385.0,4047641.0,76581888.93,12,sin_sensibles
+2008,Refrigeración,inversion,221397556.0,31758636.0,331150694.32,12,sin_sensibles
+2009,Cómputo,aee_estricta,171665832.0,1663986.0,257590635.53,12,sin_sensibles
+2009,Energía,aee_estricta,26885632.0,5645407.0,40342839.07,12,sin_sensibles
+2009,Energía,inversion,348279324.0,17127158.0,522605409.4,12,sin_sensibles
+2009,Infraestructura física,inversion,83685059.0,17344937.0,125572382.58,12,sin_sensibles
+2009,Red,aee_estricta,170185744.0,979999.0,255369711.29,12,sin_sensibles
+2009,Red,inversion,35488989.0,2835020.0,53252479.68,12,sin_sensibles
+2009,Refrigeración,inversion,144129756.0,20156196.0,216271782.3,12,sin_sensibles
+2010,Cómputo,aee_estricta,227565390.0,2514282.0,335971487.67,12,sin_sensibles
+2010,Energía,aee_estricta,28617051.0,6616264.0,42249452.77,12,sin_sensibles
+2010,Energía,inversion,482776417.0,25244554.0,712758258.32,12,sin_sensibles
+2010,Infraestructura física,inversion,183502403.0,41056020.0,270918065.91,12,sin_sensibles
+2010,Red,aee_estricta,698058835.0,2642384.0,1030595492.9,12,sin_sensibles
+2010,Red,inversion,62174142.0,5070244.0,91792249.17,12,sin_sensibles
+2010,Refrigeración,inversion,188217584.0,24855605.0,277879433.69,12,sin_sensibles
+2011,Cómputo,aee_estricta,527639195.0,10530764.0,755279441.13,12,sin_sensibles
+2011,Energía,aee_estricta,30007245.0,6181983.0,42953320.09,12,sin_sensibles
+2011,Energía,inversion,606827622.0,31882655.0,868632261.49,12,sin_sensibles
+2011,Infraestructura física,inversion,193296201.0,44321327.0,276690299.07,12,sin_sensibles
+2011,Red,aee_estricta,1354990515.0,4687548.0,1939576302.52,12,sin_sensibles
+2011,Red,inversion,82567000.0,5765042.0,118189016.67,12,sin_sensibles
+2011,Refrigeración,inversion,215442906.0,22633589.0,308391793.45,12,sin_sensibles
+2012,Cómputo,aee_estricta,566927948.0,4344085.0,795035933.37,12,sin_sensibles
+2012,Energía,aee_estricta,98926639.0,7318416.0,138730561.88,12,sin_sensibles
+2012,Energía,inversion,558263488.0,25932133.0,782885258.72,12,sin_sensibles
+2012,Infraestructura física,inversion,148221218.0,39499708.0,207859208.23,12,sin_sensibles
+2012,Red,aee_estricta,1804069356.0,4395517.0,2529951062.32,12,sin_sensibles
+2012,Red,inversion,91054885.0,5647257.0,127691544.82,12,sin_sensibles
+2012,Refrigeración,inversion,196984807.0,17147208.0,276243216.52,12,sin_sensibles
+2013,Cómputo,aee_estricta,429437494.0,3099537.0,593524372.22,12,sin_sensibles
+2013,Energía,aee_estricta,128778030.0,9094092.0,177983758.94,12,sin_sensibles
+2013,Energía,inversion,479664848.0,20022390.0,662943459.2,12,sin_sensibles
+2013,Infraestructura física,inversion,194791660.0,40227915.0,269221014.3,12,sin_sensibles
+2013,Red,aee_estricta,2030150127.0,5123565.0,2805864873.17,12,sin_sensibles
+2013,Red,inversion,95427194.0,5411859.0,131889660.78,12,sin_sensibles
+2013,Refrigeración,inversion,209323660.0,17243221.0,289305651.29,12,sin_sensibles
+2014,Cómputo,aee_estricta,294491868.0,1924637.0,400545640.77,12,sin_sensibles
+2014,Energía,aee_estricta,111313739.0,8219694.0,151400557.23,12,sin_sensibles
+2014,Energía,inversion,647724915.0,26416826.0,880986605.46,12,sin_sensibles
+2014,Infraestructura física,inversion,170171767.0,30610067.0,231454810.34,12,sin_sensibles
+2014,Red,aee_estricta,1457663737.0,5009258.0,1982604339.93,12,sin_sensibles
+2014,Red,inversion,81847347.0,4460314.0,111322591.94,12,sin_sensibles
+2014,Refrigeración,inversion,183144582.0,14302641.0,249099455.44,12,sin_sensibles
+2015,Cómputo,aee_estricta,316679812.0,2251980.0,430202783.11,12,sin_sensibles
+2015,Energía,aee_estricta,140056955.0,10117294.0,190264391.83,12,sin_sensibles
+2015,Energía,inversion,615502274.0,29268675.0,836146736.4,12,sin_sensibles
+2015,Infraestructura física,inversion,172932155.0,30953851.0,234924651.18,12,sin_sensibles
+2015,Red,aee_estricta,1931846311.0,4750343.0,2624372088.3,12,sin_sensibles
+2015,Red,inversion,96161105.0,5726876.0,130632814.06,12,sin_sensibles
+2015,Refrigeración,inversion,218761614.0,16958896.0,297182995.62,12,sin_sensibles
+2016,Cómputo,aee_estricta,260017569.0,1499931.0,348807779.11,12,sin_sensibles
+2016,Energía,aee_estricta,97576418.0,8810190.0,130896592.05,12,sin_sensibles
+2016,Energía,inversion,470139814.0,20297219.0,630682092.07,12,sin_sensibles
+2016,Infraestructura física,inversion,149619668.0,28876000.0,200711453.1,12,sin_sensibles
+2016,Red,aee_estricta,1333677960.0,3143388.0,1789099286.89,12,sin_sensibles
+2016,Red,inversion,87037125.0,5462579.0,116758365.17,12,sin_sensibles
+2016,Refrigeración,inversion,178292092.0,17523735.0,239174871.46,12,sin_sensibles
+2017,Cómputo,aee_estricta,328097175.18,2095317.5,430949571.46,12,sin_sensibles
+2017,Energía,aee_estricta,100212821.5,10338479.7,131627687.61,12,sin_sensibles
+2017,Energía,inversion,549610913.15,27851201.5,721903769.4,12,sin_sensibles
+2017,Infraestructura física,inversion,182289392.87,39607419.2,239433746.1,12,sin_sensibles
+2017,Red,aee_estricta,1566736214.77,4343235.5,2057879041.4,12,sin_sensibles
+2017,Red,inversion,106349166.32,7207405.9,139687663.04,12,sin_sensibles
+2017,Refrigeración,inversion,206569755.39,19404807.9,271325553.21,12,sin_sensibles
+2018,Cómputo,aee_estricta,248387754.01,1622998.5,318484876.38,12,sin_sensibles
+2018,Energía,aee_estricta,95474537.44,10545215.7,122418258.4,12,sin_sensibles
+2018,Energía,inversion,493540295.98,25066083.8,632821536.56,12,sin_sensibles
+2018,Infraestructura física,inversion,214128964.98,44733944.0,274557967.7,12,sin_sensibles
+2018,Red,aee_estricta,1261465519.94,4172889.9,1617461745.58,12,sin_sensibles
+2018,Red,inversion,125871327.66,9006773.6,161393279.59,12,sin_sensibles
+2018,Refrigeración,inversion,191480209.21,17763564.1,245517541.73,12,sin_sensibles
+2019,Cómputo,aee_estricta,238130946.65,1334978.8,299895608.46,12,sin_sensibles
+2019,Energía,aee_estricta,83448789.65,10695258.3,105093125.86,12,sin_sensibles
+2019,Energía,inversion,499995192.76,24267262.7,629680285.87,12,sin_sensibles
+2019,Infraestructura física,inversion,181948050.8,31522832.4,229140404.35,12,sin_sensibles
+2019,Red,aee_estricta,978897601.26,2871651.1,1232796895.5,12,sin_sensibles
+2019,Red,inversion,113144040.88,8737052.2,142490513.98,12,sin_sensibles
+2019,Refrigeración,inversion,154049771.51,12801241.9,194006073.59,12,sin_sensibles
+2020,Cómputo,aee_estricta,300679672.39,1686010.0,373981956.8,12,sin_sensibles
+2020,Energía,aee_estricta,63493029.19,7349215.1,78971907.58,12,sin_sensibles
+2020,Energía,inversion,313021878.97,13089960.9,389333052.98,12,sin_sensibles
+2020,Infraestructura física,inversion,123417830.09,23159448.0,153505693.4,12,sin_sensibles
+2020,Red,aee_estricta,883213302.69,2710049.8,1098530660.85,12,sin_sensibles
+2020,Red,inversion,137521932.83,9807873.4,171048215.98,12,sin_sensibles
+2020,Refrigeración,inversion,116966406.9,10662911.9,145481486.61,12,sin_sensibles
+2021,Cómputo,aee_estricta,712673817.41,2300979.1,846776164.5,12,sin_sensibles
+2021,Energía,aee_estricta,108947568.59,8902293.2,129448005.54,12,sin_sensibles
+2021,Energía,inversion,416253386.21,17415775.0,494578918.47,12,sin_sensibles
+2021,Infraestructura física,inversion,148316971.97,26135742.3,176225467.51,12,sin_sensibles
+2021,Red,aee_estricta,1323507214.15,3493723.7,1572548808.6,12,sin_sensibles
+2021,Red,inversion,142042884.49,11842737.7,168770798.06,12,sin_sensibles
+2021,Refrigeración,inversion,166947992.96,14242186.0,198362248.89,12,sin_sensibles
+2022,Cómputo,aee_estricta,585854258.62,1900882.2,644585554.24,12,sin_sensibles
+2022,Energía,aee_estricta,131276735.89,11912085.4,144437095.6,12,sin_sensibles
+2022,Energía,inversion,497586365.69,20517424.8,547468894.51,12,sin_sensibles
+2022,Infraestructura física,inversion,170134251.72,21486073.8,187190038.01,12,sin_sensibles
+2022,Red,aee_estricta,1820250968.01,3959345.9,2002729282.58,12,sin_sensibles
+2022,Red,inversion,200088333.66,16433945.6,220146986.3,12,sin_sensibles
+2022,Refrigeración,inversion,192478887.24,16828686.4,211774700.59,12,sin_sensibles
+2023,Cómputo,aee_estricta,351284401.9,1054465.3,371181752.32,12,sin_sensibles
+2023,Energía,aee_estricta,172618737.64,9948622.7,182396158.71,12,sin_sensibles
+2023,Energía,inversion,589037235.14,23793854.8,622401313.4,12,sin_sensibles
+2023,Infraestructura física,inversion,174774418.79,20276648.3,184673941.33,12,sin_sensibles
+2023,Red,aee_estricta,1682086336.67,3002776.0,1777362588.88,12,sin_sensibles
+2023,Red,inversion,184669489.52,15615040.9,195129485.82,12,sin_sensibles
+2023,Refrigeración,inversion,193534275.13,15041682.4,204496388.08,12,sin_sensibles
+2024,Cómputo,aee_estricta,241671230.44,1126360.6,248037535.85,12,sin_sensibles
+2024,Energía,aee_estricta,124119380.49,9227929.4,127389036.88,12,sin_sensibles
+2024,Energía,inversion,587013878.36,24409399.9,602477488.25,12,sin_sensibles
+2024,Infraestructura física,inversion,182872877.09,22147677.6,187690267.16,12,sin_sensibles
+2024,Red,aee_estricta,806257587.58,1929846.3,827496698.38,12,sin_sensibles
+2024,Red,inversion,146492050.11,13699309.5,150351066.05,12,sin_sensibles
+2024,Refrigeración,inversion,205872951.4,13656186.7,211296228.64,12,sin_sensibles
+2025,Cómputo,aee_estricta,342876689.25,2080541.1,342876689.25,11,sin_sensibles
+2025,Energía,aee_estricta,157837491.08,13354604.2,157837491.08,11,sin_sensibles
+2025,Energía,inversion,645449975.5,31140813.4,645449975.5,11,sin_sensibles
+2025,Infraestructura física,inversion,224443225.22,36124673.1,224443225.22,11,sin_sensibles
+2025,Red,aee_estricta,1029543264.09,2692578.9,1029543264.09,11,sin_sensibles
+2025,Red,inversion,161379595.66,15731473.0,161379595.66,11,sin_sensibles
+2025,Refrigeración,inversion,294051282.75,23703167.1,294051282.75,11,sin_sensibles
+2026,Cómputo,aee_estricta,229814987.57,1098523.3,223350918.8,8,sin_sensibles
+2026,Energía,aee_estricta,204124692.23,20850042.5,198383221.4,8,sin_sensibles
+2026,Energía,inversion,403963455.26,18899078.0,392601065.1,8,sin_sensibles
+2026,Infraestructura física,inversion,146573657.09,23896162.1,142450939.91,8,sin_sensibles
+2026,Red,aee_estricta,365224302.21,1254084.4,354951538.76,8,sin_sensibles
+2026,Red,inversion,114343764.53,11853224.1,111127586.31,8,sin_sensibles
+2026,Refrigeración,inversion,156392692.89,11516306.8,151993793.01,8,sin_sensibles

@@ -1,0 +1,25 @@
+# Resultados de cada corrida (se regeneran con python -m kit.<modulo>)
+salidas/
+
+# Caché de crudos de terceros (PeeringDB, Comtrade, INDEC): NUNCA se versiona ni se
+# redistribuye. Por defecto vive en ~/.cache/kit_cirtecal (variable KIT_CACHE); si se la
+# apunta dentro del repo, estas reglas la excluyen.
+cache/
+.cache/
+kit_cirtecal_cache/
+peeringdb/
+comtrade/
+*_crudo.json
+*.provenance.json
+
+# Claves y entorno
+.env
+.env.*
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/

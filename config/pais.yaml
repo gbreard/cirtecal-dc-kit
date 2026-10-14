@@ -1,0 +1,97 @@
+# Configuración del país. Es el ÚNICO archivo que un equipo tiene que completar sí o sí.
+# El bloque "obligatorio" alcanza para correr los seis métodos; el bloque "opcional"
+# agrega la comparación contra un agregado nacional y el factor de atribución.
+# Ejemplo cargado: Argentina (corrida de oct-2026). Reemplazar todo con los datos propios.
+
+# ---------------------------------------------------------------------------
+# OBLIGATORIO
+# ---------------------------------------------------------------------------
+pais: Argentina
+iso2: AR
+m49: 32                       # código M49 de la ONU (lo usa el espejo de Comtrade como socio)
+
+fuente_aduanera:
+  nombre: INDEC — comercio exterior (public-api)
+  modulo: aduana_ar           # archivo en kit/fuentes/ que implementa la interfaz
+  nomenclatura: NCM           # nomenclatura nacional (NCM, NALADISA, arancel nacional, ...)
+  digitos: 8
+  canasta_nacional: config/canasta_ar_ncm8.csv   # vacío -> se usa solo la canasta SA6
+  # Si no hay API: exportar una planilla con columnas anio,codigo,origen,valor_usd,kg
+  # y apuntarla acá (la usa aduana_plantilla.ArchivoCSV).
+  archivo: ejemplo_ar/importaciones_anual.csv
+  # Años en que entró en vigor cada enmienda del SA en la nomenclatura NACIONAL (puede ir
+  # con rezago respecto de la OMA: en AR, SA2022 rige desde 2024-01). Un código que "nace"
+  # o "muere" en uno de estos años es sospechoso de versionado, no de cambio real.
+  enmiendas_vigencia: {SA2007: 2007, SA2022: 2024}
+  deflactor_base: 2025        # año base de los US$ constantes (CPI-U de EE.UU.)
+
+anios: [2002, 2026]           # primer y último año de la serie de importación
+ultimo_periodo: "2026-08"     # último mes con dato (un año parcial no se completa)
+
+nodo_principal:               # nodo principal de intercambio de tráfico (IXP)
+  nombre: AR-IX Cabase — Cabase BUE
+  lat: -34.606739
+  lon: -58.379375
+  fuente: "PeeringDB, fac 2174 (sede 'Cabase BUE' del IX 3788), consulta 2026-10-09"
+
+estaciones_amarre:            # estaciones de aterrizaje de cables submarinos
+  - nombre: Las Toninas — Telefónica/Telxius
+    lat: -36.517228
+    lon: -56.694668
+    fuente: "OpenStreetMap way 164568373 (© colaboradores de OSM, ODbL)"
+  - nombre: Las Toninas — Cirion (ex Global Crossing)
+    lat: -36.48727
+    lon: -56.71015
+    fuente: "OpenStreetMap way 1472876782 (© colaboradores de OSM, ODbL)"
+  - nombre: Las Toninas — Telecom Argentina
+    lat: -36.486141
+    lon: -56.699176
+    fuente: "OpenStreetMap way 1473492475 (© colaboradores de OSM, ODbL)"
+  - nombre: Las Toninas — GlobeNet y estación no identificada
+    lat: -36.4882488
+    lon: -56.7050737
+    fuente: "Localidad geocodificada con Nominatim (© colaboradores de OSM, ODbL); sin coordenada pública de la estación"
+
+# ---------------------------------------------------------------------------
+# OPCIONAL
+# ---------------------------------------------------------------------------
+inventario: ejemplo_ar/inventario_v1_3.csv
+
+# Agregado nacional publicado contra el que se compara el inventario y que define el
+# parque del factor de atribución (mwbom). Sin esto, mwbom corre solo con el inventario.
+parque_referencia:
+  nombre: CABASE (relevamiento de data centers, mayo 2026)
+  operativos_mayor_1mw: 13
+  mw: 32.0
+  base_mw: IT                 # IT | bruta: si es bruta, mwbom divide por el PUE del perfil
+  fuente: "CABASE, comunicado de mayo de 2026 (ver specs/fase0/fichas/bloqueA-fuentes.md, A-01)"
+
+# Reglas del inventario que dependen del país (las genéricas están en inventario.py).
+inventario_reglas:
+  operadores_publicos: [ARSAT]            # operador estatal -> tipo_uso publico
+  patrones_transaccional: [banco, medios de pago, first data, prisma]
+  # directorios y agregadores: sirven para DESCUBRIR un sitio (descubierto_por), no
+  # como fuente del dato. Si aparecen como fuente, el registro queda con aviso.
+  fuentes_directorio: [Tengo Data, Baxtel, Data Center Map, datacentermap, DCD]
+  bbox: {lat: [-55.1, -21.7], lon: [-73.6, -53.6]}   # coordenadas fuera -> error
+
+# Ventana de importación contra la que se auditan los anuncios de hiperescala del
+# inventario (mwbom, perfil IA). Por defecto, los dos últimos años de la serie.
+ventana_anuncios: [2025, 2026]
+
+# Región metropolitana principal (para contar dentro / fuera). Una entidad es "núcleo"
+# (siempre dentro); en las de "con_umbral" decide la distancia al nodo principal.
+region_principal:
+  nombre: AMBA
+  nucleo: [CABA]
+  con_umbral: [Buenos Aires]
+
+# Sanity check de magnitud del RAEE (no calibra nada): Global E-waste Monitor 2024.
+ewaste_kg_hab: 11.6
+ewaste_anio: 2022
+poblacion: 45892285           # Censo 2022 (INDEC)
+
+espejo:
+  mapa_m49: ejemplo_ar/m49_origen.csv   # código M49 del informante -> nombre del origen en la aduana
+
+salidas: salidas/             # carpeta de resultados (no se versiona)

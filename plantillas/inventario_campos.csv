@@ -1,0 +1,26 @@
+campo,obligatorio,valores,criterio
+id,no,entero,Identificador estable del registro (no se reutiliza si se borra un registro).
+nombre,sí,texto,Nombre de la instalación tal como la llama el operador. Único en la planilla.
+alias,no,texto (separado por ;),Otros nombres con que aparece en fuentes o directorios.
+operador,no,texto,Empresa u organismo que opera el sitio.
+operador_tipo,no,publico | telco | otro,Ayuda a la regla de tipo_uso (telco -> interconexion; publico -> publico).
+tipo,no,hyperscale | colo | edge | enterprise | public | mineria | hpc,Tipo de instalación según la fuente.
+tipo_uso,sí,interconexion | transaccional | publico | corporativo_academico | computo_intensivo | ia_escala_anunciado,"Orden de la regla: ia_escala_anunciado (hiperescala NO operativa) > computo_intensivo (minería cripto o supercómputo OPERATIVO) > publico > transaccional (bancos, medios de pago) > interconexion (colocation o carrier) > corporativo_academico. computo_intensivo e ia_escala_anunciado NO entran en la comparación con el agregado nacional."
+estado,sí,operativo | construccion | anunciado | planificado | desconocido,"operativo solo con evidencia de funcionamiento. Sin obra verificable, un anuncio queda 'anunciado' aunque tenga fecha."
+provincia,no,texto,Primera división administrativa. No se completa con una macrorregión ('Patagonia').
+localidad,no,texto,
+direccion,no,texto,Dirección exacta si la publica una fuente; habilita geocodificar a nivel de puerta.
+lat,no,decimal (WGS84),Solo de dirección exacta o de la fuente. Nunca el centroide de una región. Ambas o ninguna.
+lon,no,decimal (WGS84),
+capacidad_mw,no,decimal > 0,"Solo si la fuente da MW. NUNCA se infiere de inversión, m², kVA o cantidad de racks."
+base_mw,sí si hay MW,IT | bruta | no_aclara,"IT = potencia para equipos; bruta = potencia total de la instalación; no_aclara si la fuente no lo dice. En comparaciones, IT y no_aclara se informan por separado."
+mayor_1mw,no,si | no | desconocido,Para comparar con agregados nacionales de '> 1 MW'.
+confianza,sí,alta | media | baja | estimada,alta = fuente primaria directa; media = fuente primaria indirecta o dos secundarias concordantes; baja = una secundaria o directorio; estimada = derivado por modelo.
+flags,no,tokens separados por ; (no_verificado | posible_duplicado:<nombre> | ubicacion_no_confirmada),no_verificado y posible_duplicado sacan el registro del conteo base (queda solo para sensibilidad).
+en_conteo_base,no (se calcula),sí | no,Se deriva de flags; la validación avisa si no coincide.
+fuente,sí,texto,"Fuente PRIMARIA del dato (operador, organismo oficial, documento). Un directorio no es fuente: va en descubierto_por."
+fuente_url,no,URL,"Enlace a la fuente primaria (la página concreta, no el dominio)."
+descubierto_por,no,texto,Directorio o agregador por el que se encontró el sitio (con su licencia y versión). No es fuente del dato.
+fecha_relevamiento,sí,AAAA-MM-DD,Fecha en que se leyó la fuente.
+motivacion_energetica_fuente,no,texto,"Cita de fuente primaria que declara que el sitio se ubicó por la energía. Sin cita, no se asigna la lógica 'energia'."
+notas,no,texto,Citas textuales y decisiones de revisión.
