@@ -39,9 +39,9 @@ mwbom:
     servidor_cpu: {kw: 0.4, kg: 30.0, usd: 10000,
                    _fuente: "Dell PowerEdge R760 25,1–36,1 kg; pico promedio ~0,33 kW (SPEC 2016)",
                    _estado: "verificado kg/kW; usd supuesto"}
-    dgx_h100: {kw: 10.2, kg: 130.45, usd: 290000, _fuente: "NVIDIA DGX H100 (ficha); precio SemiAnalysis/revendedores", _estado: "verificado kW/kg; usd parcial"}
-    dgx_b200: {kw: 14.3, kg: 142.4, usd: 500000, _fuente: "NVIDIA DGX B200 (ficha)", _estado: "verificado kW/kg; usd parcial"}
-    gb200_nvl72: {kw: 132.0, kg: 1360.0, usd: 3000000, _fuente: "HPE / NVIDIA GB200 NVL72; SemiAnalysis", _estado: "verificado kW/kg; usd parcial"}
+    dgx_h100: {kw: 10.2, kg: 130.45, usd: 290000, gpus: 8, _fuente: "NVIDIA DGX H100 (ficha; 8 GPU); precio SemiAnalysis/revendedores", _estado: "verificado kW/kg/gpus; usd parcial"}
+    dgx_b200: {kw: 14.3, kg: 142.4, usd: 500000, gpus: 8, _fuente: "NVIDIA DGX B200 (ficha; 8 GPU)", _estado: "verificado kW/kg/gpus; usd parcial"}
+    gb200_nvl72: {kw: 132.0, kg: 1360.0, usd: 3000000, gpus: 72, _fuente: "HPE / NVIDIA GB200 NVL72 (72 GPU); SemiAnalysis", _estado: "verificado kW/kg/gpus; usd parcial"}
     almacenamiento: {kw: 1.23, kg: 49.9, usd: 60000, _fuente: "NetApp AFF A400", _estado: verificado}
     switch: {kw: 0.94, kg: 23.5, usd: 30000, _fuente: "NVIDIA Spectrum SN5600", _estado: verificado}
     rack_vacio: {kg: 134.0, usd: 1500, _fuente: "APC AR3300 42U", _estado: "verificado kg; usd supuesto"}
@@ -56,6 +56,17 @@ mwbom:
   # IEA, Energy and AI (2025): % del consumo TOTAL; se normaliza dentro de IT (verificado)
   reparto_it: {servidores: 0.60, almacenamiento: 0.05, red: 0.05}
   redundancia: {"N": 1.0, "N+1": 1.25, "2N": 2.0}
+  # Estado de los parámetros que no son de una unidad (lo leen kit.rendimientos y la
+  # ficha docs/rendimientos_mw.md; los comentarios de arriba dicen lo mismo).
+  _estado_parametros:
+    reparto_it: verificado
+    redundancia: supuesto      # factor de diseño N+1 = 1,25: decisión, no medición
+    autonomia_min: parcial
+    pue: verificado
+    kw_rack: verificado
+    arquitectura: supuesto     # participación de servidores acelerados
+    usd_mw: verificado
+    capex_split: {convencional: supuesto, ia: parcial}
   perfiles:
     convencional:
       pue: 1.55               # Uptime Institute 2024–25: promedio ~1,54–1,56 (verificado)

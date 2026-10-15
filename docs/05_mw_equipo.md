@@ -27,4 +27,4 @@ Los coeficientes por MW, explicados como un cómputo métrico, están en [rendim
 Los centros de datos explican cerca de un sexto del equipamiento IT importado: f = 0,163 (banda 0,109–0,233), y menos del 2% del equipamiento eléctrico y de refrigeración. Todo el cómputo importado entre enero de 2025 y agosto de 2026 alcanzaría para equipar unos 14 MW, el 3% del mayor proyecto anunciado (500 MW).
 
 ## En el kit
-`kit/mwbom.py`, con los parámetros y sus fuentes en `config/parametros.yaml`. Se corre con `python -m kit.mwbom`.
+`kit/mwbom.py`, con los parámetros y sus fuentes en `config/parametros.yaml`. Se corre con `python -m kit.mwbom`. La tabla de rendimientos por MW sale del mismo modelo con `python -m kit.rendimientos`.
