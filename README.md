@@ -41,6 +41,7 @@ python -m kit.fuentes.comtrade --sa6 8471.50 8473.30 --anios 2023 2025   # 4a. e
 python -m kit.espejo --bajar-aduana             # 4b. cruce (o con espejo_aduana.csv propio)
 python -m kit.mwbom                             # 5. MW -> equipo -> aduana y f
 python -m kit.rendimientos                       # 5b. (opcional) rendimientos por MW de IT
+python -m kit.agua                              # 5c. (opcional) agua directa e indirecta
 python -m kit.raee                              # 6. RAEE (banda, segunda vida, nivel DC)
 ```
 
@@ -101,7 +102,7 @@ Con eso corren los seis métodos.
 ```
 docs/         fichas de método (empezar por docs/README.md)
 config/       pais.yaml · parametros.yaml · canasta_sa6.csv · canasta_ar_ncm8.csv · deflactor_cpiu_anual.csv
-kit/          comun.py · inventario.py · localizacion.py · aduana.py · espejo.py · mwbom.py · rendimientos.py · raee.py
+kit/          comun.py · inventario.py · localizacion.py · aduana.py · espejo.py · mwbom.py · rendimientos.py · agua.py · raee.py
 kit/fuentes/  aduana_plantilla.py · aduana_ar.py · comtrade.py · peeringdb.py · http.py
 plantillas/   inventario.csv (planilla vacía con una fila de ejemplo) · inventario_campos.csv (criterios)
 ejemplo_ar/   insumos agregados y resultados de la corrida argentina (ver ejemplo_ar/LEAME.md)

@@ -1,4 +1,6 @@
 """rendimientos.py: tabla por MW de IT sobre el modelo de mwbom (sin red)."""
+import pytest
+
 from kit import comun, rendimientos
 
 
@@ -30,3 +32,21 @@ def test_estado_por_dimension():
     assert e("verificado kW/kg/gpus; usd parcial", "gpus") == "verificado"
     assert e("verificado kg", "usd") == "no_declarado"
     assert e("verificado solo unidades chicas", "kg") == "parcial"
+
+
+def test_filas_de_agua_por_mw():
+    par, cfg = comun.parametros(), comun.pais()
+    filas = [x for x in rendimientos.tabla(par["mwbom"], 1.0, par["agua"], cfg["matriz_generacion"])
+             if x["familia"] == "agua"]
+    # 2 perfiles × 3 escenarios × (3 directas + indirecta red + embalses)
+    assert len(filas) == 2 * 3 * 5
+    f = next(x for x in filas if x["perfil"] == "convencional" and x["escenario"] == "central"
+             and x["componente"] == "agua_directa_evaporativo")
+    # directa = 8.760 MWh IT × WUE (L/kWh) = m³/año
+    assert f["cantidad"] == round(8760 * f["capacidad"], 1)
+    g = next(x for x in filas if x["perfil"] == "ia" and x["escenario"] == "central"
+             and x["componente"] == "agua_indirecta_red")
+    # indirecta = 8.760 MWh IT × PUE × intensidad
+    pue = par["mwbom"]["perfiles"]["ia"]["pue"]
+    assert g["cantidad"] == pytest.approx(8760 * pue * g["capacidad"], rel=1e-3)
+    assert all(x["estado"] in rendimientos.ORDEN for x in filas)

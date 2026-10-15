@@ -91,6 +91,60 @@ ewaste_kg_hab: 11.6
 ewaste_anio: 2022
 poblacion: 45892285           # Censo 2022 (INDEC)
 
+# Agua (kit.agua). Matriz de generación local del año de referencia, en GWh, por
+# tecnología de agua.generacion_l_kwh de parametros.yaml. Se excluye la importación.
+matriz_generacion:
+  anio: 2025
+  fuente: >-
+    CAMMESA, Resumen Anual 2025 (provisorio) y "Estadísticas anuales 2005-2025.xlsx",
+    hoja "Evolución anual", filas 62-78 (https://cammesaweb.cammesa.com/variables-relevantes-del-mem-resumen-anual/)
+  gwh:
+    ciclo_combinado: 66923
+    turbina_gas: 3987
+    turbovapor: 3264
+    motor_diesel: 1050
+    hidro: 30144          # > 50 MW (Comahue, Salto Grande, Yacyretá y resto)
+    hidro_menor: 1374     # <= 50 MW (renovable); usa el coeficiente de hidro
+    nuclear: 10761
+    eolica: 18632
+    solar: 5106
+    biomasa: 1030
+    biogas: 522
+  importacion_gwh: 4304   # sin dato de su intensidad hídrica: no se usa
+
+# Consumo urbano de referencia para expresar el agua directa en habitantes equivalentes.
+agua_urbana:
+  l_hab_dia: [180, 276, 495]   # [bajo, central, alto]
+  _fuente: >-
+    ERAS, Informe Anual de Benchmarking 2023 (IF-2025-00008758-ERAS-GG#ERAS): AySA
+    comercializa 276 L/hab/día (p. 26); media de prestadores ADERASA 180 (p. 26); agua
+    producida (dotación) 495 L/hab/día en 2023 (p. 47). 276 y 180 son facturados; 495 incluye pérdidas.
+  ciudad_referencia: {nombre: Neuquén (municipio), poblacion: 289712,
+                      _fuente: "Censo 2022, Dirección Provincial de Estadística de Neuquén, población por gobierno local"}
+
+# Casos de agua. mw: potencia del caso; base IT o bruta; pue: [bajo, central, alto] del
+# escenario de energía IT (si la base es bruta, la energía IT = total / PUE).
+agua_casos:
+  - id: parque_referencia
+    mw: 32.0
+    base_mw: IT
+    perfil: convencional
+    pue: [1.3, 1.55, 2.0]
+    nota: "32 MW × 8.760 h × PUE 1,3–2,0 = 364–561 GWh/año (A.9); central = PUE del perfil convencional"
+  - id: proyecto_500mw
+    mw: 500.0
+    base_mw: bruta
+    perfil: ia
+    pue: [1.2, 1.2, 1.08]
+    suministro_propio: [ciclo_combinado, ciclo_combinado_seco, turbina_gas]
+    nota: "500 MW de consumo total en operación continua = 4.380 GWh/año; IT = total / PUE (IA 1,08–1,2)"
+  - id: proyecto_500mw_si_IT
+    mw: 500.0
+    base_mw: IT
+    perfil: ia
+    pue: [1.08, 1.2, 1.2]
+    nota: "sensibilidad: si los 500 MW fueran de IT, la energía total sube a 4.730–5.256 GWh/año"
+
 espejo:
   mapa_m49: ejemplo_ar/m49_origen.csv   # código M49 del informante -> nombre del origen en la aduana
 

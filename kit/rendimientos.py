@@ -16,7 +16,7 @@ Uso:  python -m kit.rendimientos [--mw 1]
 """
 from __future__ import annotations
 
-from . import comun, mwbom
+from . import agua as _agua, comun, mwbom
 
 KW_POR_TR = 3.517            # 1 tonelada de refrigeración = 3,517 kW térmicos
 ORDEN = {"no_declarado": 0, "supuesto": 1, "parcial": 2, "verificado": 3}
@@ -54,8 +54,17 @@ def _detalle(estados: dict[str, str]) -> str:
     return "; ".join(f"{k}={v}" for k, v in estados.items())
 
 
-def tabla(par: dict, mw: float = 1.0) -> list[dict]:
-    """Filas de la tabla de rendimientos para `mw` MW de IT."""
+def _estado_texto(texto: str) -> str:
+    """Primer estado que aparece en un `_estado` libre ("parcial (leído del gráfico)")."""
+    pal = (texto or "").replace("(", " ").split()
+    return next((w for w in pal if w in ORDEN), "no_declarado")
+
+
+def tabla(par: dict, mw: float = 1.0, agua: dict | None = None,
+          matriz: dict | None = None) -> list[dict]:
+    """Filas de la tabla de rendimientos para `mw` MW de IT. Con `agua` (parametros.yaml)
+    agrega el agua directa por escenario de refrigeración; con `matriz` (pais.yaml), también
+    la indirecta de la red del país (sin embalses y evaporación de embalses, aparte)."""
     U, E = par["unidades"], par.get("_estado_parametros", {})
     filas = []
 
@@ -151,6 +160,39 @@ def tabla(par: dict, mw: float = 1.0) -> list[dict]:
             fila(nombre_perfil, esc, "calor_a_evacuar", "refrigeracion", {"fisica": "verificado"},
                  it_kw / KW_POR_TR, "TR", it_kw / 1000, "MW térmicos",
                  nota="toda la potencia de IT se vuelve calor; 1 TR = 3,517 kW")
+            # --- Agua (kit.agua, operación continua) -----------------------------------
+            if agua:
+                i = mwbom.ESC_BOM.index(esc)
+                e = {b: (mw * _agua.HORAS / 1000, mw * _agua.HORAS / 1000 * perfil["pue"])
+                     for b in _agua.BANDA}
+                intens = _agua.intensidad_matriz(agua, matriz) if matriz else None
+                nulo = {b: {"sin_embalse": 0.0, "embalse": 0.0} for b in _agua.BANDA}
+                for x in _agua.calcular("", e, agua, nombre_perfil, intens or nulo, "red"):
+                    if x["banda"] != esc:
+                        continue
+                    tec = x["tecnologia_refrigeracion"]
+                    fila(nombre_perfil, esc, f"agua_directa_{x['refrigeracion']}", "agua",
+                         {f"wue.{tec}": _estado_texto(agua["wue_l_kwh_it"][tec].get("_estado"))},
+                         x["directa_hm3"] * 1e6, "m³/año", x["wue_l_kwh_it"], "L/kWh IT",
+                         nota=f"directa = energía IT × WUE ({tec}); banda {esc}")
+                if intens:
+                    gen = agua["generacion_l_kwh"]
+                    est = {f"generacion.{k}": _estado_texto(gen.get(k, gen["hidro"]).get("_estado"))
+                           for k in matriz["gwh"] if k in gen
+                           and not gen[k].get("_estado", "").startswith("sin_dato")}
+                    est["pue"] = E.get("pue", "no_declarado")
+                    tot_kwh = e[esc][1] * 1e6
+                    fila(nombre_perfil, esc, "agua_indirecta_red", "agua", est,
+                         tot_kwh * intens[esc]["sin_embalse"] / 1000, "m³/año",
+                         intens[esc]["sin_embalse"], "L/kWh total",
+                         nota=f"energía total × intensidad de la matriz {matriz.get('anio')} "
+                              "sin embalses (turbina de gas y motores: sin dato, 0)")
+                    fila(nombre_perfil, esc, "agua_indirecta_embalse", "agua",
+                         {"generacion.hidro": _estado_texto(gen["hidro"].get("_estado")),
+                          "pue": E.get("pue", "no_declarado")},
+                         tot_kwh * intens[esc]["embalse"] / 1000, "m³/año",
+                         intens[esc]["embalse"], "L/kWh total",
+                         nota="evaporación de embalses asignada a la hidro: se informa aparte")
             # --- Infraestructura ----------------------------------------------------
             infra_kg, infra_est = 0.0, {}
             for eq in perfil["refrigeracion"]:
@@ -226,7 +268,8 @@ def main() -> None:
     ap.add_argument("--mw", type=float, default=1.0, help="MW de IT (default 1)")
     a = ap.parse_args()
     cfg, par = comun.pais(a.pais), comun.parametros(a.parametros)
-    print(comun.escribir_csv(comun.salida("rendimientos_mw.csv", cfg), tabla(par["mwbom"], a.mw)))
+    print(comun.escribir_csv(comun.salida("rendimientos_mw.csv", cfg), tabla(par["mwbom"], a.mw, par.get("agua"),
+                                                   cfg.get("matriz_generacion"))))
 
 
 if __name__ == "__main__":

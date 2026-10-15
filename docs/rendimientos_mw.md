@@ -54,6 +54,28 @@ En el modelo, el equipo de energía y refrigeración **no tiene banda**: PUE, re
 
 La vía física (precio de cada equipo) cubre solo una parte de la inversión en energía y refrigeración: entre el 16 % y el 40 % de lo que asigna la vía económica. La diferencia es instalación y obra. Para la inversión se usa la vía económica; la física sirve para el IT.
 
+### Agua
+Operación continua: 1 MW de IT son 8.760 MWh de IT por año. El **agua directa** (en el sitio) es la energía de IT por el WUE de la refrigeración. El **agua indirecta** (la que consume la generación eléctrica) es la energía total (IT × PUE) por la intensidad hídrica de la matriz. Todo es consumo, no extracción. Cifras en m³ por año por MW de IT, escenarios bajo / central / alto; las salidas de `python -m kit.rendimientos` (filas `agua_*`) y de `python -m kit.agua` (casos del país).
+
+| Componente | Convencional | De IA | Coeficiente usado |
+|---|---|---|---|
+| Agua directa, refrigeración seca | 0 / 438 / 876 | 0 / 0 / 1.314 | WUE 0–0,1 L/kWh (aire) y 0–0,15 (líquido con disipación seca) |
+| Agua directa, mixta | 1.314 / 2.628 / 11.388 | igual | WUE 0,15 / 0,30 / 1,3 L/kWh |
+| Agua directa, evaporativa (torre) | 19.272 / 25.404 / 28.032 | 14.016 / 17.520 / 21.900 | WUE 2,2 / 2,9 / 3,2 (aire) y 1,6 / 2,0 / 2,5 (líquido) |
+| Agua indirecta, red argentina sin embalses | 3.037 / 6.503 / 11.198 | 2.351 / 5.035 / 8.670 | 0,22 / 0,48 / 0,82 L por kWh generado (matriz 2025) |
+| Evaporación de embalses (aparte) | 16.184 / 50.949 / 204.096 | 12.529 / 39.445 / 158.010 | 1,2 / 3,8 / 15,0 L/kWh |
+
+Fuentes, todas en [`config/parametros.yaml`](../config/parametros.yaml) (bloque `agua`) con su estado:
+- **WUE por tecnología:** LBNL, *2024 United States Data Center Energy Usage Report* (Shehabi et al.), Fig. 4.4, p. 46. Son valores simulados que se leen de un gráfico (±0,1–0,2 L/kWh): estado parcial. La definición (agua anual / energía de IT) es la de The Green Grid; el documento original (WP#35, 2011) no se pudo consultar.
+- **WUE mixto:** flotas medidas de AWS 2024 (0,15 L/kWh; Amazon 2024 Sustainability Report, p. 24), Microsoft FY2024 (0,30; blog del 9-dic-2024) y Meta 2024 (0,19; 2025 Environmental Data Index, p. 10). AWS y Meta informan extracción, no consumo.
+- **Agua de la generación:** Macknick et al. (2012), *Environmental Research Letters* 7 045802, Tablas 1 y 2. La banda del ciclo combinado va de refrigeración de paso a torre, porque la del parque térmico argentino no está publicada. La turbina de gas de ciclo abierto y los motores no tienen dato y se toman como 0.
+- **Matriz argentina:** CAMMESA, Resumen Anual 2025 (provisorio), en [`config/pais.yaml`](../config/pais.yaml).
+
+Tres advertencias:
+- **La evaporación de los embalses va aparte.** Asignarla a la generación es una convención discutida, y en Argentina multiplica el agua indirecta entre 5 y 18 veces. Si se suma, el resultado lo decide ese supuesto y no el centro de datos.
+- **El agua y la energía se compensan.** La refrigeración seca no usa agua en el sitio pero sube el PUE, y con él el agua indirecta. Con refrigeración seca o mixta, el agua indirecta pesa más que la directa.
+- **El agua no depende del tipo de centro, sino de cómo se refrigera.** Un MW de IA con torre consume más agua que un MW convencional con aire.
+
 ## Lo que la tabla enseña
 
 - **Un MW de IA pesa mucho menos y vale lo mismo o más.** Por MW, un centro convencional tiene unas 65 toneladas de equipo IT; uno de IA, menos de 20. El valor por tonelada se multiplica entre 3,5 y 5,4 veces, según el escenario. Por eso la comparación entre lo anunciado y lo importado se hace en valor y no en peso (método 5), y por eso un centro de IA genera menos residuo IT por MW, aunque lo renueva más rápido (método 6).

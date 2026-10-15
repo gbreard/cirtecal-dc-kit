@@ -98,6 +98,91 @@ mwbom:
   tolerancia_vias: 3.0        # física vs económica fuera de [1/3, 3] -> supuesto roto
 
 # ---------------------------------------------------------------------------
+# Agua (kit.agua y filas de agua de kit.rendimientos). Cada coeficiente va como banda
+# [bajo, central, alto]. Agua DIRECTA = energía IT × WUE; agua INDIRECTA = energía TOTAL ×
+# intensidad hídrica de la generación. Todo es CONSUMO (agua que no vuelve a la fuente),
+# no extracción. La evaporación de embalses hidroeléctricos se informa aparte: su
+# asignación a la generación está discutida en la literatura.
+# ---------------------------------------------------------------------------
+agua:
+  # WUE en sitio, litros por kWh de energía IT (definición de The Green Grid; la denominación
+  # con energía IT es la de LBNL 2024, p. 42).
+  wue_l_kwh_it:
+    aire_seco:
+      banda: [0.0, 0.05, 0.1]
+      _fuente: "LBNL 2024 (Shehabi et al., LBNL-2001637), Fig. 4.4, p. 46: expansión directa, chiller enfriado por aire, dry cooler, economizador de aire ≈ 0"
+      _estado: "parcial (leído del gráfico; ±0,1 L/kWh)"
+    mixto:
+      banda: [0.15, 0.30, 1.3]
+      _fuente: >-
+        Bajo: AWS 2024, WUE de flota 0,15 (Amazon 2024 Sustainability Report, p. 24; es
+        extracción). Central: Microsoft FY2024, 0,30 (blog 9-dic-2024). Alto: LBNL 2024
+        Fig. 4.4, economizador de aire con chiller enfriado por agua, escala media ≈ 1,3.
+        Meta 2024: 0,19 (2025 Environmental Data Index, p. 10).
+      _estado: "parcial (flotas medidas que mezclan tecnologías y climas; alto leído del gráfico)"
+    evaporativo:
+      banda: [2.2, 2.9, 3.2]
+      _fuente: >-
+        LBNL 2024 Fig. 4.4, chiller enfriado por agua con torre: economizador del lado agua,
+        gran escala ≈ 2,2; escala media ≈ 2,9; chico ≈ 3,2 (medianas; extremos 1,7–4,1)
+      _estado: "parcial (leído del gráfico)"
+    liquido_seco:
+      banda: [0.0, 0.0, 0.15]
+      _fuente: "LBNL 2024 Fig. 4.4: líquido directo al chip con dry cooler ≈ 0; con asistencia adiabática ≈ 0,15"
+      _estado: "parcial (leído del gráfico)"
+    liquido_evaporativo:
+      banda: [1.6, 2.0, 2.5]
+      _fuente: "LBNL 2024 Fig. 4.4: líquido directo al chip con economizador del lado agua y torre ≈ 2,0 (1,6–2,5)"
+      _estado: "parcial (leído del gráfico)"
+  # qué tecnología representa cada escenario de refrigeración, por perfil
+  escenarios_refrigeracion:
+    convencional: {seco: aire_seco, mixto: mixto, evaporativo: evaporativo}
+    ia: {seco: liquido_seco, mixto: mixto, evaporativo: liquido_evaporativo}
+  # Consumo operativo de agua de la generación, L por kWh generado. Macknick et al. (2012),
+  # Environ. Res. Lett. 7 045802, Tablas 1 y 2 (p. 5), en gal/MWh × 0,003785.
+  generacion_l_kwh:
+    ciclo_combinado:
+      banda: [0.38, 0.78, 1.14]
+      _fuente: "Macknick T2: once-through mediana 100 gal/MWh; torre mediana 205, máx. 300"
+      _estado: "parcial (la refrigeración del parque argentino es sin dato: la banda cubre once-through a torre)"
+    ciclo_combinado_seco:
+      banda: [0.0, 0.008, 0.015]
+      _fuente: "Macknick T2: ciclo combinado seco 2 (0–4) gal/MWh"
+      _estado: verificado
+    turbina_gas:
+      banda: [0.0, 0.0, 0.0]
+      _fuente: "sin dato: Macknick no tiene ciclo abierto; sin refrigeración por agua se toma 0"
+      _estado: "sin_dato"
+    turbovapor:
+      banda: [0.36, 0.91, 3.13]
+      _fuente: "Macknick T2 (gas, vapor): once-through 240 (95–291); torre mediana 826"
+      _estado: "parcial (refrigeración sin dato)"
+    motor_diesel:
+      banda: [0.0, 0.0, 0.0]
+      _fuente: "sin dato en Macknick; se toma 0"
+      _estado: "sin_dato"
+    nuclear:
+      banda: [0.38, 1.02, 2.54]
+      _fuente: "Macknick T2: once-through 269 (100–400); torre mediana 672"
+      _estado: "parcial (refrigeración sin dato)"
+    hidro:
+      banda: [5.4, 17.0, 68.1]
+      _fuente: >-
+        Macknick T1: hidro (in-stream y embalse) 4491 (1425–18 000) gal/MWh; asigna toda la
+        evaporación del embalse a la generación. Mekonnen y Hoekstra (2012), HESS 16, Tabla 1:
+        El Chocón ≈ 472 L/kWh, Yacyretá ≈ 287 L/kWh (fuera de la banda)
+      _estado: "parcial (asignación discutida; se informa aparte)"
+    eolica: {banda: [0.0, 0.0, 0.0], _fuente: "Macknick T1: 0", _estado: verificado}
+    solar: {banda: [0.0, 0.004, 0.019], _fuente: "Macknick T1: FV de escala 1 (0–5) gal/MWh", _estado: verificado}
+    biomasa:
+      banda: [1.14, 2.09, 3.65]
+      _fuente: "Macknick T1 (biopower vapor): once-through 300; torre 553 (480–965)"
+      _estado: "parcial (refrigeración sin dato)"
+    biogas: {banda: [0.13, 0.13, 0.13], _fuente: "Macknick T1: biogás seco 35 gal/MWh (n = 1)", _estado: parcial}
+  # tecnologías cuyo consumo es evaporación de embalses (se reportan aparte)
+  tecnologias_embalse: [hidro, hidro_menor]
+
+# ---------------------------------------------------------------------------
 # Espejo (aduana propia vs exportaciones declaradas por los socios en Comtrade)
 # ---------------------------------------------------------------------------
 espejo:
