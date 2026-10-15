@@ -26,10 +26,10 @@ codigo_nacional,sa6,componente,tier,tdf_solape,doble_uso,tag,cota_superior,sensi
 8471.50.90,8471.50,Servidor / unidad de proceso (los demás),1,bajo,medio,nucleo,0,0,Excluye 8471.50.10/.20 (PCs).,
 8471.70.10,8471.70,Almacenamiento (discos magnéticos),2,bajo,medio,nucleo,0,0,Storage.,
 8471.70.11,8471.70,Almacenamiento: discos flexibles [pred.],2,bajo,medio,nucleo,0,0,"EMPALME C-5: predecesor de 8471.70.10 (enmienda 7, último dato 2023-12).",8471.70.10
-8471.70.12,8471.70,Almacenamiento: discos rígidos (1 conjunto) [pred.],2,bajo,medio,nucleo,0,0,"EMPALME C-5: predecesor de 8471.70.10 (enmienda 7, último dato 2023-12).",8471.70.10
-8471.70.19,8471.70,Almacenamiento: discos magnéticos ncop [pred.],2,bajo,medio,nucleo,0,0,"EMPALME C-5: predecesor de 8471.70.10 (enmienda 7, último dato 2023-12).",8471.70.10
-8471.70.40,8471.70,Almacenamiento (semiconductor/SSD),2,bajo,medio,nucleo,0,0,Storage.,
-8471.70.90,8471.70,Almacenamiento (los demás),2,bajo,medio,nucleo,0,0,Storage.,
+8471.70.12,8471.70,Almacenamiento: discos rígidos (1 conjunto) [pred.],2,bajo,medio,nucleo,0,0,"EMPALME C-5: predecesor de 8471.70.10 (enmienda 7, último dato 2023-12). La correlación Mercosur lo reparte en ex 8471.70.10 y ex 8471.70.90 (ambos en la canasta).",8471.70.10
+8471.70.19,8471.70,Almacenamiento: discos magnéticos ncop [pred.],2,bajo,medio,nucleo,0,0,"EMPALME C-5: predecesor de 8471.70.10 (enmienda 7, último dato 2023-12). La correlación Mercosur lo reparte en ex 8471.70.10 y ex 8471.70.90 (ambos en la canasta).",8471.70.10
+8471.70.40,8471.70,Almacenamiento (semiconductor/SSD),2,bajo,medio,nucleo,0,0,"Storage. Nace en 2024-01 (NCM VII enmienda, Res. GMC 16/21); viene entero de 8471.70.90 (tabla de correlación NCM 2017–2022 de la DNIT Paraguay, consultada 2026-10-15; glosa INDEC 'Unidades de memoria de estado sólido (SSD)', enm. 7).",
+8471.70.90,8471.70,Almacenamiento (los demás),2,bajo,medio,nucleo,0,0,"Storage. EMPALME C-5 PARCIAL: desde 2024-01 los SSD salen a 8471.70.40 y este código sigue vigente (ncop; 8471.70.90 -> 8471.70.40 y ex 8471.70.90, tabla de correlación NCM 2017–2022 de la DNIT Paraguay, consultada 2026-10-15). Recibe además parte de 8471.70.12/.19 y de los ópticos y cintas. Leer siempre la suma .40 + .90.",ex 8471.70.40
 8471.80.00,8471.80,Unidad de máquina ADP (las demás),4,bajo,medio,AEE-estricta,0,0,Unidad de cómputo.,
 8473.30.49,8473.30,GPU / acelerador (placa o módulo),1,bajo,alto,nucleo,0,0,COTA SUPERIOR: no hay línea de 'GPU'; cae en 'los demás'. Leer junto con 8471 (GPU escondido en el servidor).,
 8473.30.90,8473.30,GPU / acelerador (placa o módulo),1,bajo,alto,nucleo,0,0,COTA SUPERIOR: no hay línea de 'GPU'; cae en 'los demás'. Leer junto con 8471 (GPU escondido en el servidor).,
@@ -76,5 +76,5 @@ codigo_nacional,sa6,componente,tier,tdf_solape,doble_uso,tag,cota_superior,sensi
 8544.70.20,8544.70,Cable de fibra óptica (acero/submarino),2,bajo,alto,nucleo,0,0,COTA SUPERIOR: cable compartido con telecom/electrónica; peso upper-bound.,
 8544.70.30,8544.70,Cable de fibra óptica (aluminio),2,bajo,alto,nucleo,0,0,COTA SUPERIOR: cable compartido con telecom/electrónica; peso upper-bound.,
 8544.70.90,8544.70,Cable de fibra óptica (los demás),2,bajo,alto,nucleo,0,0,COTA SUPERIOR: cable compartido con telecom/electrónica; peso upper-bound.,
-9403.20.00,9403.20,Mueble de metal (rack / gabinete),4,bajo,alto,capex,1,0,Infraestructura física. MUY genérico (cualquier mueble metálico / acero): cota sup. fuerte. Discontinuado 2024-05 (C-5).,
-9403.20.90,9403.20,Mueble de metal (los demás; rack / gabinete),4,bajo,alto,capex,1,0,Infraestructura física. MUY genérico (cualquier mueble metálico / acero): cota sup. fuerte. Sucesor de 9403.20.00 (C-5).,
+9403.20.00,9403.20,Mueble de metal (rack / gabinete),4,bajo,alto,capex,1,0,"Infraestructura física. MUY genérico (cualquier mueble metálico / acero): cota sup. fuerte. EMPALME: discontinuado por Res. GMC 19/22 (Anexo), adoptada por el Decreto 384/2024 (BO 06/05/2024); se parte en 9403.20.10 (cocinas, fuera de la canasta) y 9403.20.90 (los demás). Hasta 2024-04 incluye los muebles de cocina.",9403.20.90
+9403.20.90,9403.20,Mueble de metal (los demás; rack / gabinete),4,bajo,alto,capex,1,0,Infraestructura física. MUY genérico (cualquier mueble metálico / acero): cota sup. fuerte. Sucesor de 9403.20.00 desde 2024-05 (Res. GMC 19/22; Decreto 384/2024).,

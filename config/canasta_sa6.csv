@@ -16,7 +16,7 @@ sa6,descripcion,capa,canasta,serie_raee,tipo_vida,familia_mwbom,enmienda_2022,no
 8471.50,Unidades de proceso (servidores),Cómputo,aee_estricta,limpia,computo,servidores,,
 8471.70,Unidades de almacenamiento,Cómputo,aee_estricta,limpia,almacenamiento,almacenamiento,,
 8471.80,Unidad de máquina ADP (las demás),Cómputo,aee_estricta,limpia,computo,servidores,,
-8473.30,Partes y accesorios de 8471 (incluye GPU/aceleradores),Cómputo,aee_estricta,cota_superior,computo,servidores,parte → 8524,"SA2022 creó la partida 8524 (módulos de pantalla plana), antes clasificados como partes (p. ej. 8473.30). A VERIFICAR contra la tabla de correlación SA2017–SA2022 de la OMA."
+8473.30,Partes y accesorios de 8471 (incluye GPU/aceleradores),Cómputo,aee_estricta,cota_superior,computo,servidores,parte (ex) → 8524,"Verificado. SA2022 creó la partida 85.24 (módulos de visualización de pantalla plana, Nota 7 Cap. 85); salen de 84.73 solo esos módulos. OMA, Correlation Tables HS 2017–2022 (nov-2020): Tabla I, p. I/27 (8524.11–8524.99 y 8529.90) y Tabla II, pp. II/18–19 (84.73 -> ex8524.xx). 8473.30 conserva su texto: placas, GPU, memorias y demás partes de 8471 siguen acá. En la NCM: 8473.30.92 (pantallas de portátiles) -> ex 8524.91/.92/.99 y 8473.30.99 -> 8473.30.90 (tabla de correlación NCM 2017–2022, DNIT Paraguay)."
 8502.12,Grupos electrógenos diésel 75–375 kVA,Energía,inversion,,,gensets,,
 8502.13,Grupos electrógenos diésel >375 kVA,Energía,inversion,,,gensets,,
 8504.21,Transformadores de dieléctrico líquido ≤650 kVA,Energía,inversion,,,transformadores,,

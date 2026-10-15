@@ -63,7 +63,7 @@ Con eso corren los seis métodos.
 | Archivo | Qué hacer |
 |---|---|
 | `kit/fuentes/aduana_<pais>.py` | Implementar la interfaz de `aduana_plantilla.py`, que devuelve año, código, origen, valor y kg. `aduana_ar.py` (INDEC) es el ejemplo. **Si la aduana no tiene API, no hace falta programar:** se exporta una planilla con esas cinco columnas y se pone su ruta en `fuente_aduanera.archivo`. |
-| `config/canasta_<pais>.csv` | Abrir la canasta común de 6 dígitos (`canasta_sa6.csv`) en la nomenclatura nacional. Declarar en `sucesor_empalme` los códigos viejos que la enmienda 2022 fusionó en uno nuevo. `canasta_ar_ncm8.csv` es el ejemplo. Sin este archivo, el kit trabaja a 6 dígitos. |
+| `config/canasta_<pais>.csv` | Abrir la canasta común de 6 dígitos (`canasta_sa6.csv`) en la nomenclatura nacional. Declarar en `sucesor_empalme` los códigos viejos que la enmienda 2022 fusionó en uno nuevo. Si el código viejo sigue vigente y solo una parte pasó al nuevo, se escribe `ex <nuevo>` (como en las tablas de correlación) y la serie se lee como la suma de los dos. `canasta_ar_ncm8.csv` es el ejemplo. Sin este archivo, el kit trabaja a 6 dígitos. |
 | `pais.yaml`, `enmiendas_vigencia` | Año en que cada enmienda del SA entró en vigor en la nomenclatura nacional. Puede llegar con rezago: en Argentina, el SA2022 rige desde 2024. |
 | `pais.yaml`, `parque_referencia` | Agregado nacional publicado (cantidad de data centers de más de 1 MW, MW, base IT o bruta). Es opcional, pero sin él no hay factor de atribución contra un parque nacional. |
 | `pais.yaml`, `inventario_reglas` | Operadores estatales, patrones de operadores transaccionales, directorios que no cuentan como fuente y recuadro de coordenadas del país. |

@@ -58,11 +58,14 @@ que cambia es el redondeo de f:
   En la serie argentina se documentaron como subestimación previa a 2007, sin empalme.
 - **La enmienda 2022 (vigente desde 2024-01) con empalme declarado:** 8471.41, 8471.70.1x,
   8473.30.99 → .90, 8517.62.31/.32/.48 y 8517.70.x → 8517.79.
-- **Dos hallazgos que el control deja a la vista:**
-  - 8471.70.40 (SSD) nace en 2024 sin predecesor en la canasta. Habría que buscarlo antes
-    de leer un crecimiento del almacenamiento.
-  - 9403.20.90 (racks) nace en 2024 y su predecesor, 9403.20.00, no está declarado como
-    empalme. En la corrida original se documentó a mano.
+- **Dos hallazgos que el control dejó a la vista, resueltos el 15-oct-2026** (detalle y
+  fuentes en `docs/trampas.md`, ítem 2):
+  - 8471.70.40 (SSD) viene entero de 8471.70.90, que sigue vigente: es un empalme parcial
+    (`ex 8471.70.40`). La suma de los dos pasa de US$82,0M (2023) a 87,3M (2024).
+  - 9403.20.90 (racks) es el sucesor de 9403.20.00 desde 2024-05 (Res. GMC 19/22,
+    Decreto 384/2024).
+  - Los dos siguen con la marca informativa `nace_en_enmienda`, pero ya no con
+    `sin_empalme`. Ninguna cifra cambia.
 - **Vacíos:** 8528, 8541, 8542.31 y 8542.32. Son códigos de 4 o 6 dígitos que la API de
   INDEC no responde. Son de sensibilidad y nunca se cargaron.
 

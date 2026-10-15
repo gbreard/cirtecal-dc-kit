@@ -28,8 +28,8 @@ codigo,desde,hasta,anios_con_dato,sucesor_empalme,marcas
 8471.70.11,2002,2023,22,8471.70.10,muere_en_enmienda
 8471.70.12,2002,2023,22,8471.70.10,muere_en_enmienda
 8471.70.19,2002,2023,22,8471.70.10,muere_en_enmienda
-8471.70.40,2024,2026,3,,nace_en_enmienda;sin_empalme
-8471.70.90,2002,2026,25,,ok
+8471.70.40,2024,2026,3,,nace_en_enmienda
+8471.70.90,2002,2026,25,ex 8471.70.40,ok
 8471.80.00,2007,2026,20,,nace_en_enmienda;sin_empalme
 8473.30.49,2002,2026,25,,ok
 8473.30.90,2024,2026,3,,nace_en_enmienda
@@ -76,5 +76,5 @@ codigo,desde,hasta,anios_con_dato,sucesor_empalme,marcas
 8544.70.20,2003,2025,18,,ok
 8544.70.30,2003,2026,23,,ok
 8544.70.90,2002,2026,25,,ok
-9403.20.00,2002,2024,23,,ok
-9403.20.90,2024,2026,3,,nace_en_enmienda;sin_empalme
+9403.20.00,2002,2024,23,9403.20.90,ok
+9403.20.90,2024,2026,3,,nace_en_enmienda

@@ -24,9 +24,9 @@ La extensión nacional (en Argentina, [`config/canasta_ar_ncm8.csv`](../config/c
 | 8471.41 | Máquinas de procesamiento de datos completas, en una misma envoltura | Incluye computadoras de uso general; según el país, aquí pueden ir sistemas de IA integrados |
 | 8471.49 | Máquinas presentadas en forma de sistemas | Donde suelen declararse los sistemas acelerados completos (tipo HGX/DGX) |
 | 8471.50 | Unidades de proceso: servidores | La posición más propia de un centro de datos |
-| 8471.70 | Unidades de almacenamiento (discos, arreglos) | Revisar códigos nuevos sin predecesor (en Argentina, 8471.70.40 de SSD desde 2024) |
+| 8471.70 | Unidades de almacenamiento (discos, arreglos) | Revisar códigos nuevos sin predecesor. En Argentina, 8471.70.40 (SSD, desde 2024) viene entero de 8471.70.90: leer la suma de los dos ([trampas](trampas.md), ítem 2) |
 | 8471.80 | Las demás unidades de máquinas de procesamiento | Residual |
-| 8473.30 | Partes y accesorios de 8471, **incluidos los aceleradores (GPU) sueltos** | Mezcla placas de uso doméstico, *gaming* y minería: **cota superior**. La enmienda 2022 pasó parte a 8524 (módulos de pantalla): verificar con la tabla de la OMA |
+| 8473.30 | Partes y accesorios de 8471, **incluidos los aceleradores (GPU) sueltos** | Mezcla placas de uso doméstico, *gaming* y minería: **cota superior**. La enmienda 2022 pasó a 8524 solo los módulos de pantalla plana; verificado con la tabla de la OMA ([trampas](trampas.md), ítem 3) |
 | 8523.51 | Almacenamiento no volátil (flash, SSD) | También es de consumo masivo |
 
 ### Red (canasta AEE estricta, salvo cables)
@@ -60,7 +60,7 @@ La extensión nacional (en Argentina, [`config/canasta_ar_ncm8.csv`](../config/c
 ### Infraestructura física (solo sensibilidad en las series)
 | SA6 | Qué registra | Cuidado |
 |---|---|---|
-| 9403.20 | Muebles de metal: racks y gabinetes | Posición genérica de muebles; en Argentina saltó en 2025 por la apertura de importaciones de muebles. Revisar el predecesor declarado |
+| 9403.20 | Muebles de metal: racks y gabinetes | Posición genérica de muebles; en Argentina saltó en 2025 por la apertura de importaciones de muebles. Predecesor: 9403.20.00, hasta 2024-04 ([trampas](trampas.md), ítem 2) |
 | 7326.90 | Las demás manufacturas de hierro o acero | Muy genérica |
 
 ### Solo sensibilidad o indicativas

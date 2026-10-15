@@ -69,12 +69,34 @@ def serie_por_codigo(registros: list[Registro]) -> dict[tuple[str, int], dict]:
     return out
 
 
+def es_parcial(sucesor: str) -> bool:
+    """`sucesor_empalme = "ex X"`: una parte del código pasó a X y el código sigue vigente
+    (la notación "ex" de las tablas de correlación de la OMA y del Mercosur)."""
+    return (sucesor or "").strip().lower().startswith("ex ")
+
+
+def destino(sucesor: str) -> str:
+    """Código de destino de un enlace de empalme, sin el prefijo "ex"."""
+    s = (sucesor or "").strip()
+    return s[3:].strip() if es_parcial(s) else s
+
+
 def empalmar(codigo: str, sucesores: dict[str, str]) -> str:
-    """Código de la serie empalmada: el predecesor se lee como su sucesor (cadenas incl.)."""
+    """Código de la serie empalmada.
+    Enlace total (`viejo -> nuevo`): el predecesor se lee como su sucesor (cadenas incl.).
+    Enlace parcial (`viejo -> ex nuevo`): el viejo sigue vigente, así que el código nuevo se
+    lee junto con el viejo (la serie empalmada es la suma de los dos)."""
+    parciales = {destino(v): k for k, v in sucesores.items() if es_parcial(v)}
+    totales = {k: v for k, v in sucesores.items() if v and not es_parcial(v)}
     vistos = set()
-    while codigo in sucesores and sucesores[codigo] and codigo not in vistos:
+    while codigo not in vistos:
         vistos.add(codigo)
-        codigo = sucesores[codigo]
+        if codigo in parciales:
+            codigo = parciales[codigo]
+        elif totales.get(codigo):
+            codigo = totales[codigo]
+        else:
+            break
     return codigo
 
 
@@ -84,9 +106,10 @@ def control_codigos(serie: dict, codigos: list[str], anios: tuple[int, int],
     vacio             nunca devolvió nada (¿código inexistente? ¿mal escrito?)
     nace_en_enmienda  primer dato en un año de enmienda (posterior al inicio de la serie)
     muere_en_enmienda último dato el año previo a una enmienda (antes del fin de la serie)
-    sin_empalme       nace o muere en enmienda y no tiene predecesor/sucesor declarado."""
+    sin_empalme       nace o muere en enmienda y no tiene predecesor/sucesor declarado
+                      (un enlace parcial "ex X" cuenta como predecesor declarado de X)."""
     años_enm = set(enmiendas.values())
-    predecesores = {v: k for k, v in sucesores.items() if v}
+    predecesores = {destino(v): k for k, v in sucesores.items() if v}
     filas = []
     for c in codigos:
         a = sorted(an for (cod, an) in serie if cod == c)
@@ -100,7 +123,7 @@ def control_codigos(serie: dict, codigos: list[str], anios: tuple[int, int],
                     marcas.append("sin_empalme")
             if a[-1] < anios[1] and (a[-1] + 1) in años_enm:
                 marcas.append("muere_en_enmienda")
-                if not sucesores.get(c):
+                if not sucesores.get(c) or es_parcial(sucesores[c]):
                     marcas.append("sin_empalme")
         filas.append({"codigo": c, "desde": a[0] if a else None, "hasta": a[-1] if a else None,
                       "anios_con_dato": len(a), "sucesor_empalme": sucesores.get(c, ""),

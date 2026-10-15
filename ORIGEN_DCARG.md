@@ -105,8 +105,9 @@ relevamiento argentino:
 5. **Correspondencias del SA2022 a 6 dígitos.**
    - **Incluidas:** solo dos.
      - 8517.70 → 8517.71 / 8517.79: verificado en la serie argentina.
-     - Parte de 8473.30 → 8524 (módulos de pantalla): **marcado "a verificar"** contra la
-       tabla de correlación de la OMA, que no se consultó en esta tarea.
+     - Parte de 8473.30 → 8524 (módulos de pantalla): **verificado** el 15-oct-2026
+       contra la tabla de correlación de la OMA (Tabla I, p. I/27; Tabla II, pp. II/18–19).
+       Ver `docs/trampas.md`, ítem 3.
    - **Pendiente:** completar la tabla con la correlación oficial antes de difundirla como
      "canasta común".
 6. **Nacimientos del SA2007 sin empalme** (8471.49, 8471.80, 8517.62.x y otros). En la
