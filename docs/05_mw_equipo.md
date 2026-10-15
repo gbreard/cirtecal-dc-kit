@@ -9,6 +9,8 @@
 - Costos de inversión por MW, desagregados por subsistema.
 - La serie aduanera de la ficha 03.
 
+Los coeficientes por MW, explicados como un cómputo métrico, están en [rendimientos_mw.md](rendimientos_mw.md).
+
 ## Procedimiento
 1. **De la potencia al equipo.** Repartir la potencia de IT entre servidores de propósito general y sistemas acelerados (participación supuesta entre 0% y 15%) y calcular cantidad, masa y valor de servidores, almacenamiento y red. El equipamiento eléctrico y de refrigeración se dimensiona con la potencia total (PUE).
 2. **Dos vías.** Física (hojas técnicas) y económica (costo por MW). Si convergen en el componente IT, el cálculo es consistente.

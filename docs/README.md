@@ -11,6 +11,7 @@ Cada ficha explica un método del kit: qué pregunta responde, con qué fuentes,
 | [La canasta](canasta.md) | ¿Qué posiciones arancelarias miramos, por qué y cómo cambian por país? | `config/canasta_sa6.csv` |
 | [04 · Espejo](04_espejo.md) | ¿Lo que no se ve en la aduana está oculto o mal atribuido? | `kit/espejo.py` |
 | [05 · De los MW al equipo](05_mw_equipo.md) | ¿Qué parte de lo importado va a centros de datos? | `kit/mwbom.py` |
+| [Rendimientos por MW](rendimientos_mw.md) | ¿Cuánto equipo, peso y valor lleva un MW de IT? | `config/parametros.yaml` |
 | [06 · RAEE](06_raee.md) | ¿Cuánto residuo generan y cuándo? | `kit/raee.py` |
 | [Trampas](trampas.md) | Lo que nos hizo equivocar, para que no les pase | — |
 
